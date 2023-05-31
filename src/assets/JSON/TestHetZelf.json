@@ -1,0 +1,29 @@
+{
+  "steps": [
+    {
+      "title": "Stap 1",
+      "description": "Scan QR-code (desktop) of druk op de knop (mobile)",
+      "image": "qrcode_test.png"
+    },
+    {
+      "title": "Stap 2",
+      "description": "Open WhatsApp desktop of mobile",
+      "image": "Icon_awesome-image.png"
+    },
+    {
+      "title": "Stap 3",
+      "description": "Wijzig optioneel de tekst na de  |\r of verstuur de voor gedefinieerde tekst (incl. de prefix)",
+      "image": "src/assets/TestHetZelf/qrcode_test.png"
+    },
+    {
+      "title": "Stap 4",
+      "description": "Verstuur het bericht",
+      "image": "Icon_awesome-image.png"
+    },
+    {
+      "title": "Stap 5",
+      "description": "Ontvang de gewenste response",
+      "image": "Icon_awesome-image.png"
+    }
+  ]
+}
