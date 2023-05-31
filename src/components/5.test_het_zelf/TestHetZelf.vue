@@ -78,7 +78,7 @@ export default {
         // {title: 'Stap 4', description: 'Verstuur het bericht', image: 'Icon_awesome-image.png'},
         {title: 'Stap 4', description: 'Verstuur het bericht'},
         // {title: 'Stap 5', description: 'Ontvang de gewenste response', image: 'Icon_awesome-image.png'}
-        {title: 'Stap 5', description: 'Ontvang de gewenste response'}
+        {title: 'Stap 5', description: 'Ontvang de gewenste respons'}
       ],
     };
   },
