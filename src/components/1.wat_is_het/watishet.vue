@@ -150,7 +150,6 @@
 </template>
 
 <script>
-import Mogelijkheden from "./Mogelijkheden.vue";
 import infoOverWhatsapp from "../../assets/JSON/WatIsHet.json";
 
 export default {
