@@ -6,7 +6,7 @@
     <div class="container-xl py-5 mb-5" id="verschillende_manieren">
       <div class="row">
         <div class="col">
-          <h2 class="mb-5 py-xl-5 py-lg-5 py-md-5 py-sm-5 py-0">{{ WatDoetHet.title_verschillendeManieren }}</h2>
+          <h2 class="mb-0 py-xl-5 py-lg-5 py-md-5 py-sm-5 py-0">{{ WatDoetHet.title_verschillendeManieren }}</h2>
         </div>
       </div>
       <div class="row justify-content-center">
