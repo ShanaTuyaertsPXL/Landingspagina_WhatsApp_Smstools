@@ -173,9 +173,6 @@ export default {
   //     return "test";
   //   }
   // },
-  components: {
-    Mogelijkheden,
-  },
   methods: {
     // async loadJSONData() {
     //   try {
