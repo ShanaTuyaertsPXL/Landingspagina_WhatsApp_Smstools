@@ -23,7 +23,7 @@ import Voorwaarden from "./4.voorwaarden/voorwaarden.vue";
 import TestHetZelf from "./5.test_het_zelf/TestHetZelf.vue";
 // import UseCases from "./UseCases.vue";
 import Contact from "./contact.vue";
-import FooterComponent from "./_.Footer/FooterComponent.vue";
+import FooterComponent from "./7.Footer/FooterComponent.vue";
 // import Example from "./example.vue";
 
 export default {
