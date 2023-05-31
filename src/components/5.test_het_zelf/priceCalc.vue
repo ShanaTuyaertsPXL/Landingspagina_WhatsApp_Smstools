@@ -1,77 +1,85 @@
 <template>
   <div id="pricecalc">
     <div class="container-fluid p-0 w-100">
-    <div class="container-xl pt-5">
-      <!--      <flagstrap :selected="selectedCountry" @changed="handleCountryChange"></flagstrap>-->
+      <div class="container-xl pt-5">
+        <!--      <flagstrap :selected="selectedCountry" @changed="handleCountryChange"></flagstrap>-->
 
-      <div class="row">
-        <div class="col">
-          <h2>Verstuur online sms'en<br>via onze SMS software en/of API</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xl-6 col-lg-10">
-          <p>Bent u klaar voor het avontuur met Smstools?</p>
-          <p>Bereken hier de totale kosten voor het versturen van sms-berichten. Bij ons betaalt u alleen voor wat u
-            verbruikt, zonder setup- of maandelijkse kosten.</p>
-          <p>Hoe meer sms-berichten u verzendt, hoe voordeliger het tarief per bericht wordt. We bieden een 100%
-            garantie op de beste prijs/kwaliteitverhouding. Neem snel contact met ons op voor een offerte op maat of
-            voor postpaid-opties!</p>
-        </div>
-        <div class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-10" id="pricecalc_section">
-          <div id="calc">
-            <div class="row p-0">
-              <div class="offset-xl-0 col-xl-12 offset-lg-0 offset-lg-6 mb-4 pb-3">
-                <label for="country">Sms-berichten versturen</label>
-              </div>
-            </div>
-            <div class="row p-0">
-              <div class="col-xl-6 col-lg-6">
-                <label for="aantal">Aantal sms'en versturen:</label>
-              </div>
-              <div class="col-6 mb-4">
-                <input id="aantal" type="text" v-model="aantal" min="1" @click="clearInput" @input="enkelNummers"
-                       :maxlength="maximaleLengteInput">
-              </div>
-            </div>
-            <div class="row p-0">
-              <div class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6">
-                <label for="select" class="mr-4">Land van ontvangst:</label>
-              </div>
-              <div class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6">
-                <select id="select" v-model="selectedProduct" class="btn btn-dark float-start dropdown-toggle dropdown">
-                  <option>Verstuur en ontvang berichten in</option>
-                  <option v-for="land in prijzen" :key="land.id" :value="land.id"><i
-                      class="flag flag-united-states"></i>
-                    {{ land.country }}
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div class="row p-0" id="calculated">
-              <hr>
-              <div class="col p-0 m-0">
-                <p style="font-size: 20px; font-weight: 600;">Kostprijs</p>
-                <p style="font-size: 22px; font-weight: 900;">€ {{ PricePerSms }}</p>
-                <p style="font-size: 18px; font-weight: 400;">per bericht</p>
-              </div>
-              <div class="pl-4 col-6">
-                <p style="font-size: 20px; font-weight: 600;">TOTAAL</p>
-                <p style="font-size: 22px; font-weight: 900;"> Vanaf € {{ totalPrice }}</p>
-
-              </div>
-
-            </div>
-
-
+        <div class="row">
+          <div class="offset-xl-0 col-xl-12 offset-lg-0 col-lg-7 offset-md-0 col-md-12" id="title">
+            <h2>Verstuur online sms'en<br>via onze SMS software en/of API</h2>
           </div>
-          <svg width="1000" height="1000">
-<!--            <circle cx="381" cy="381" r="380" fill="#dc3545"/>-->
-            <circle cx="405" cy="405" r="405" fill="#dc3545"/>
-          </svg>
+        </div>
+        <div class="row">
+          <div
+              class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-12 offset-sm-0 col-sm-12 offset-0 col-12">
+            <p>Bent u klaar voor het avontuur met Smstools?</p>
+            <p>Bereken hier de totale kosten voor het versturen van sms-berichten. Bij ons betaalt u alleen voor wat u
+              verbruikt, zonder setup- of maandelijkse kosten.</p>
+            <p>Hoe meer sms-berichten u verzendt, hoe voordeliger het tarief per bericht wordt. We bieden een 100%
+              garantie op de beste prijs/kwaliteitverhouding. Neem snel contact met ons op voor een offerte op maat of
+              voor postpaid-opties!</p>
+          </div>
+          <div class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-12 col-sm-12 col-12"
+               id="pricecalc_section">
+            <div id="calc">
+              <div class="row p-0">
+                <div
+                    class="offset-xl-0 col-xl-12 offset-lg-1 col-lg-11 col-md-12 col-sm-12 col-12 mb-sm-4 mb-2 pb-3 ml-xl-0 ml-lg-0 ml-md-5 pl-xl-0 pl-lg-0 pl-md-5 pb-sm-0 pb-0">
+                  <label for="country">Sms-berichten versturen</label>
+                </div>
+              </div>
+              <div class="row p-0">
+                <div
+                    class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-1 col-md-5 offset-sm-0 col-sm-7 offset-2 col-8">
+                  <label for="aantal">Aantal sms'en versturen:</label>
+                </div>
+                <div
+                    class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-6 offset-sm-0 col-sm-5 offset-2 col-8 mb-4">
+                  <input id="aantal" type="text" v-model="aantal" min="1" @click="clearInput" @input="enkelNummers"
+                         :maxlength="maximaleLengteInput">
+                </div>
+              </div>
+              <div class="row p-0">
+                <div
+                    class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-1 col-md-5 offset-sm-0 col-sm-7 offset-2 col-8">
+                  <label for="select" class="mr-4">Land van ontvangst:</label>
+                </div>
+                <div
+                    class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-6 offset-sm-0 col-sm-5 offset-2 col-8 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-2 mb-2">
+                  <select id="select" v-model="selectedProduct"
+                          class="btn btn-dark float-start dropdown-toggle dropdown">
+                    <option>Verstuur en ontvang berichten in</option>
+                    <option v-for="land in prijzen" :key="land.id" :value="land.id">
+                      <!--                    <i class="flag flag-united-states"></i>-->
+                      {{ land.country }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="row p-0" id="calculated">
+                <hr>
+                <div class="col p-0 m-0">
+                  <p>Kostprijs</p>
+                  <p>€ {{ PricePerSms }}</p>
+                  <p>per bericht</p>
+                </div>
+                <div class="pl-4 col-6">
+                  <p>TOTAAL</p>
+                  <p> Vanaf € {{ totalPrice }}</p>
+
+                </div>
+
+              </div>
+
+
+            </div>
+            <svg width="1000" height="1000">
+              <!--            <circle cx="381" cy="381" r="380" fill="#dc3545"/>-->
+              <circle cx="405" cy="405" r="405" fill="#dc3545"/>
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
       <div id="wave"></div>
     </div>
   </div>
@@ -190,6 +198,7 @@ export default {
     }
 
     input {
+      margin-top: 4%;
       border: none;
       padding: 5% 0;
       border-radius: 10px;
@@ -198,6 +207,7 @@ export default {
     }
 
     select.btn {
+      margin-top: 4%;
       width: 80%;
       padding: 5% 0 5% 5%;
       border-radius: 10px;
@@ -205,14 +215,28 @@ export default {
 
     option {
       background: $colorTertiary;
-      color:$colorPrimary;
+      color: $colorPrimary;
       text-align: left;
     }
 
     #calculated p {
-      color: #ffffff;
+      color: $colorTertiary;
       margin: 0;
       padding: 0;
+
+      &:nth-child(1) {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      &:nth-child(2) {
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      &:nth-child(3) {
+        font-size: 18px;
+      }
     }
 
     ::-webkit-scrollbar-thumb {
@@ -228,6 +252,10 @@ export default {
 @media screen and (max-width: 1200px) {
   #pricecalc {
     overflow: hidden;
+
+    h2 {
+      font-size: $fontSizeH2;
+    }
   }
 }
 
@@ -235,17 +263,124 @@ export default {
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
+  #pricecalc {
+    height: 90vh;
+    h2 {
+      font-size: 20px;
+    }
+
+    svg {
+      //display: none;
+      position: relative;
+      right: 3.5%;
+      top: -35%;
+      z-index: -1;
+    }
+
+    #pricecalc_section {
+
+      #calc {
+        margin-top: -25%;
+        margin-left: 25%;
+      }
+
+      label[for=country] {
+        font-size: 25px;
+        margin-left: 12%;
+      }
+
+      label[for=aantal], label[for=select] {
+        font-size: 16px;
+      }
+
+      input {
+        margin-top: 2%;
+        border: none;
+        padding: 5% 0;
+        border-radius: 10px;
+        width: 80%;
+        text-indent: 10px;
+      }
+
+      select.btn {
+        margin-top: 2%;
+        width: 80%;
+        padding: 5% 0 5% 5%;
+        border-radius: 10px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
+  #pricecalc {
+    height: 149vh;
+
+    svg {
+      position: relative;
+      right: 0;
+      top: -28%;
+      z-index: -1;
+    }
+
+    #pricecalc_section {
+      #calc {
+        margin-top: 5%;
+        margin-left: 15%;
+      }
+
+      label[for=country] {
+        font-size: 25px;
+        color: $colorTertiary;
+        margin-left: 9%;
+      }
+
+      label[for=aantal], label[for=select] {
+        font-size: 18px;
+        margin-top: 9%;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 415px) and (max-width: 576px) {
+  #pricecalc {
+    height: 153vh;
+
+    svg {
+      position: relative;
+      right: 21%;
+      top: -27%;
+    }
+
+    #pricecalc_section {
+      padding: 5% 0;
+
+      #calc {
+        margin-top: 2%;
+        margin-left: 15%;
+      }
+
+      label[for=country] {
+        font-size: 25px;
+        color: $colorTertiary;
+        margin-left: 10%;
+      }
+
+      label[for=aantal], label[for=select] {
+        font-size: 18px;
+        margin-left: -5%;
+        margin-top: 5%;
+      }
+    }
+  }
+
   #hoe-werkt-het {
     #how-it-works {
       h3 {
         font-size: $FontSizeH3Mobile;
       }
+
       p {
         font-size: .75rem;
       }
@@ -254,11 +389,140 @@ export default {
 }
 
 @media screen and (max-width: 415px) {
+  #pricecalc {
+    height: 165vh;
+
+    svg {
+      position: relative;
+      right: 46%;
+      top: -30%;
+    }
+
+    #title h2 {
+      color: $FontSizeH2_BreakMobile;
+    }
+
+    p {
+      font-size: $FontSizeParagraphMobile;
+    }
+
+    #pricecalc_section {
+      padding: 5% 0;
+
+      #calc {
+        margin-top: 0;
+        margin-left: 15%;
+      }
+
+      label[for=country] {
+        font-size: 20px;
+        color: $colorTertiary;
+        margin-left: 8%;
+        margin-bottom: 0;
+      }
+
+      label[for=aantal], label[for=select] {
+        font-size: 15px;
+      }
+    }
+
+    #calculated p {
+      margin: 0;
+      padding: 0;
+
+      &:nth-child(1) {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      &:nth-child(2) {
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      &:nth-child(3) {
+        font-size: 16px;
+      }
+    }
+  }
+
   #hoe-werkt-het {
     #how-it-works {
       h3 {
         font-size: .9rem;
       }
+
+      p {
+        font-size: .75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #pricecalc {
+    height: 160vh;
+
+    svg {
+      position: relative;
+      right: 75%;
+      top: -33%;
+    }
+
+    #title h2 {
+      color: $FontSizeH2_BreakMobile;
+    }
+
+    p {
+      font-size: $FontSizeParagraphMobile;
+    }
+
+    #pricecalc_section {
+      padding: 5% 0;
+
+      #calc {
+        margin-top: 0;
+        margin-left: 15%;
+      }
+
+      label[for=country] {
+        font-size: 20px;
+        color: $colorTertiary;
+        margin-left: 8%;
+        margin-bottom: 0;
+      }
+
+      label[for=aantal], label[for=select] {
+        font-size: 15px;
+      }
+    }
+
+    #calculated p {
+      margin: 0;
+      padding: 0;
+
+      &:nth-child(1) {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      &:nth-child(2) {
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      &:nth-child(3) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  #hoe-werkt-het {
+    #how-it-works {
+      h3 {
+        font-size: .9rem;
+      }
+
       p {
         font-size: .75rem;
       }
