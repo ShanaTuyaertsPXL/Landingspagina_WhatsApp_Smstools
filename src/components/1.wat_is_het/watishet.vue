@@ -7,18 +7,14 @@
       <div id="verbind_whatsapp" class="pt-xl-5 pt-lg-5 pt-md-5 pt-sm-0 pt-5 pb-0">
         <div class="container-xl pt-xl-5 pt-lg-5 pt-md-5 pt-sm-0 pt-3">
           <div class="row" id="verbind">
-            <!--            <div class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-0 offset-0 col-xl-7 col-lg-6 pl-xl-4 col-md-10 justify-content-xl-start justify-content-lg-start justify-content-md-center justify-content-sm-center text-xl-left text-lg-left text-md-left text-sm-center text-center      order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2   pl-lg-5" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="350">-->
-            <div
-                class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-1 offset-1 col-xl-7 col-lg-6 pl-xl-4 col-md-10 col-sm-10 col-10 justify-content-xl-start justify-content-lg-start justify-content-md-center justify-content-sm-center text-left      order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2   pl-lg-5">
+            <div class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-1 offset-1 col-xl-7 col-lg-6 pl-xl-4 col-md-10 col-sm-10 col-10 justify-content-xl-start justify-content-lg-start justify-content-md-center justify-content-sm-center text-left      order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2   pl-lg-5" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="350">
               <h2 class="mb-xl-3 mb-lg-3 mb-md-4 mb-sm-4 mb-4">{{ WatIsHet.verbindWhatsapp.title }}</h2>
               <div v-for="(item, index) in WatIsHet.verbindWhatsapp.description" :key="index">
                 <p>{{ item }}</p>
               </div>
             </div>
 
-            <!--            <div class="offset-xl-0 offset-lg-0 offset-md-2 offset-sm-1 offset-1 offset-1 col-xl-5 col-lg-6 col-md-10 col-sm-8 col-8  mb-xl-0 mb-lg-0 mb-md-4 mb-sm-4 mb-4    order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="400">-->
-            <div
-                class="offset-xl-0 offset-lg-0 offset-md-2 offset-sm-1 offset-1 col-xl-5 col-lg-6 col-md-10 col-sm-10 col-10  mb-xl-0 mb-lg-0 mb-md-5 mb-sm-4 mb-4    order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1">
+            <div class="offset-xl-0 offset-lg-0 offset-md-2 offset-sm-1 offset-1 col-xl-5 col-lg-6 col-md-10 col-sm-10 col-10  mb-xl-0 mb-lg-0 mb-md-5 mb-sm-4 mb-4    order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="400">
               <img :src="imagePath + WatIsHet.verbindWhatsapp.image" :alt="WatIsHet.verbindWhatsapp.image"/>
             </div>
           </div>
@@ -30,8 +26,7 @@
       <div id="break_one">
         <div class="container-xl">
           <div class="row my-0 pt-5 pb-0">
-            <!--            <div class="col-12 text-center font-italic font-weight-bold text-white mt-5 pt-5" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="425">-->
-            <div class="col-12 text-center font-italic font-weight-bold text-white mt-5 pt-5 my-0">
+            <div class="col-12 text-center font-italic font-weight-bold text-white mt-5 pt-5 my-0" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="425">
               <p>"{{ WatIsHet.break1 }}"</p>
             </div>
           </div>
@@ -40,15 +35,11 @@
     </div>
     <div class="container-xl py-5" id="whatsapp_integratie">
       <div class="row py-xl-5 py-lg-5 py-md-4">
-        <!--                <div class="offset-xl-0 offset-lg-0 offset-md-2 offset-sm-2 offset-2 col-xl-6 col-lg-5 col-md-10 col-sm-10 col-10  mb-xl-0 mb-lg-0 mb-md-4 mb-sm-4 mb-4    order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="450">-->
-        <div
-            class="offset-xl-0 offset-lg-0 offset-md-2 offset-sm-2 offset-2 col-xl-6 col-lg-5 col-md-10 col-sm-10 col-10  mb-xl-0 mb-lg-0 mb-md-5 mb-sm-4 mb-4    order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1">
+        <div class="offset-xl-0 offset-lg-0 offset-md-2 offset-sm-2 offset-2 col-xl-6 col-lg-5 col-md-10 col-sm-10 col-10  mb-xl-0 mb-lg-0 mb-md-5 mb-sm-4 mb-4    order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="450">
           <img :src="imagePath+WatIsHet.whatsappIntegratie.image" :alt="WatIsHet.whatsappIntegratie.image">
         </div>
 
-        <!--                <div class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-0 offset-0 col-xl-6 col-lg-7 pl-xl-0 col-md-10 justify-content-xl-start justify-content-lg-start justify-content-md-center justify-content-sm-center text-left      order-xl-2 order-lg-2 order-md-2 order-sm-2 order-2   pl-lg-5" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="450">-->
-        <div
-            class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-1 offset-0 col-xl-6 col-lg-7 pl-xl-0 col-md-10 col-sm-10 justify-content-xl-start justify-content-lg-start justify-content-md-center justify-content-sm-center text-left      order-xl-2 order-lg-2 order-md-2 order-sm-2 order-2   pl-lg-5">
+        <div class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-1 offset-0 col-xl-6 col-lg-7 pl-xl-0 col-md-10 col-sm-10 justify-content-xl-start justify-content-lg-start justify-content-md-center justify-content-sm-center text-left      order-xl-2 order-lg-2 order-md-2 order-sm-2 order-2   pl-lg-5" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="450">
           <h2 class="mb-xl-3 mb-lg-3 mb-md-4 mb-sm-4 mb-4">{{ WatIsHet.whatsappIntegratie.title }}</h2>
           <p>{{ WatIsHet.whatsappIntegratie.description }}</p>
           <div id="summary_integration" class="ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3"
@@ -118,11 +109,11 @@
       <div class="container-xl py-xl-5 py-lg-5 py-md-5 py-sm-3 py-3">
         <div class="row py-5">
           <div class="col">
-            <!--          <h2 class="mb-xl-3 mb-lg-3 mb-md-4 mb-sm-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="100">Ontdek de voordelen van <span>WhatsApp</span> voor uw-->
-            <h2 class="mb-xl-5 mb-lg-5 mb-md-4 mb-sm-4 mb-4">{{ WatIsHet.part_1_voordelen_title }}
+            <h2 class="mb-xl-5 mb-lg-5 mb-md-4 mb-sm-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="100">{{ WatIsHet.part_1_voordelen_title }}
               <span>{{ WatIsHet.span }}</span> {{ WatIsHet.part_2_voordelen_title }}</h2>
 
-            <!--                        <div class="d-flex advantage_svg" data-aos="zoom-in" data-aos-duration="1200" data-aos-offset="250" v-for="(item, index) in WatIsHet.voordelen" :key="index">-->
+            <!--                        <div class="d-flex advantage_svg" v-for="(item, index) in WatIsHet.voordelen" :key="index">-->
+            <div data-aos="fade-up" data-aos-duration="1200" data-aos-offset="250">
             <div class="d-flex advantage_svg" v-for="(item, index) in WatIsHet.voordelen" :key="index">
               <i class="bi bi-check-lg"></i>
               <svg width="100" height="100" class="mr-xl-2 mr-lg-2 mr-md-5 mr-sm-5">
@@ -131,6 +122,7 @@
               <p class="mt-4 pt-2">{{ item }}</p>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </div>
@@ -138,8 +130,7 @@
 <!--    BREAK 2-->
     <div class="container-fluid py-xl-5 py-lg-5 py-md-5 py-sm-4 py-4" id="break_two">
       <div class="row">
-        <!--                <div class="col" data-aos="fade-right" data-aos-duration="1200" data-offset="600">-->
-        <div class="col">
+        <div class="col" data-aos="fade-right" data-aos-duration="1200" data-offset="600">
           <p class="text-center text-white font-italic font-weight-bold">{{ WatIsHet.break2 }}</p>
         </div>
       </div>
