@@ -1,5 +1,14 @@
 <template>
   <!--  <div id="contact" data-spy="scroll" data-target=".navbar" data-offset="50">-->
+  <!--            <div v-if="showSuccessMessage" id="succes">-->
+  <div v-if="showAlert" id="succes">
+    <div id="alert">
+      <div class="progress-bar" :style="{ width: progressBarWidth }"></div>
+      <p>Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
+    </div>
+  </div>
+<!--    <button @click="startTimer">Toon alert</button>-->
+
   <div id="background_contact">
     <div id="wave_contact"></div>
     <div id="contact">
@@ -56,101 +65,26 @@
                 <div
                     class="offset-xl-0 col-xl-12 offset-lg-0 col-lg-12 offset-md-0 col-md-12 offset-sm-0 col-sm-12 offset-1 col-10">
                   <label>Uw bericht *</label><br>
-                  <textarea id="message" name="message" @blur="validateMsg" v-model.trim="message"></textarea>
+                  <textarea id="message" name="message" @blur="validateMsg" v-model.trim="message" rows="4"
+                            cols="50"></textarea>
                   <p v-if="msgValid === 'invalid'" id="textarea">Gelieve uw bericht in te geven</p>
                 </div>
               </div>
               <div class="row text-xl-left text-lg-center text-md-center text-sm-center text-center">
                 <!--              <div class="offset-xl-0 col-xl-12 offset-lg-4 col-lg-4 offset-md-4 col-md-4 offset-sm-4 col-sm-3 mt-4">-->
                 <div class="offset-0 col-12 mt-4">
-                  <button class="px-5 py-2 border-0 g-recaptcha" type="submit">Verzenden</button>
+                  <button class="px-5 py-2 border-0 g-recaptcha" type="submit" @click="startTimer">Verzenden
+                  </button>
                 </div>
               </div>
             </form>
           </div>
           <div
               class="offset-xl-0 col-xl-5 offset-lg-3 col-lg-6 offset-md-3 col-md-6 offset-sm-2 col-sm-8 offset-2 col-8  order-xl-2 order-lg-1 order-md-1 order-sm-1 order-1 pl-xl-5 pl-lg-0 pl-md-0 pl-sm-0 pl-0">
-            <img src="src/assets/Contact/Sevinç_contact.png" class="mb-xl-0 mb-lg-4 mb-md-4 mb-sm-4 mb-4" id="contact_img" alt="contact image">
-            <div v-if="showSuccessMessage" id="succes">
-              <p>Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
-            </div>
+            <img src="src/assets/Contact/Sevinç_contact.png" class="mb-xl-0 mb-lg-4 mb-md-4 mb-sm-4 mb-4"
+                 id="contact_img" alt="contact image">
           </div>
         </div>
-        <!--            <div class="row text-xl-left text-lg-left text-md-center text-sm-center text-center">-->
-        <!--              <div-->
-        <!--                  class="offset-xl-0 col-xl-7 offset-lg-1 col-lg-10 offset-md-1 col-md-10 offset-sm-1 col-sm-10 offset-1 col-10 py-xl-0 my-xl-0 py-lg-0 my-lg-0 order-xl-1 order-lg-2 order-md-2 order-sm-2 order-2">-->
-        <!--                <form @submit.prevent="submitForm" method="POST" action="mailto: shana.tuyaerts@student.pxl.be"-->
-        <!--                      enctype="text/plain">-->
-        <!--                  &lt;!&ndash;      NAAM&ndash;&gt;-->
-        <!--                  <div class="row">-->
-        <!--                    <div class="col-xl-6 col-lg-6 col-md-6">-->
-        <!--                      <div class="form-control" :class="{ invalid: nameValid }">-->
-        <!--                        <label for="name">Naam *</label>-->
-        <!--                        <input id="name" name="name" type="text" @blur="validateName" required v-model.trim="name">-->
-        <!--                        <p v-if="nameValid === 'invalid'">Gelieve een naam in te geven</p>-->
-        <!--                      </div>-->
-        <!--                    </div>-->
-
-        <!--                    <div class="col-xl-6 col-lg-6 col-md-6">-->
-        <!--                      &lt;!&ndash;      NAAM BEDRIJF&ndash;&gt;-->
-        <!--                      <div class="form-control" :class="{ invalid: companyValid }">-->
-        <!--                        <label for="company">Naam bedrijf *</label>-->
-        <!--                        <input id="company" name="company" type="text" @blur="validateCompany" v-model.trim="company">-->
-        <!--                        <p v-if="companyValid === 'invalid'">Gelieve een bedrijfsnaam in te geven</p>-->
-        <!--                      </div>-->
-        <!--                    </div>-->
-        <!--                  </div>-->
-
-        <!--                  <div class="row">-->
-        <!--                    <div class="col-xl-6 col-lg-6 col-md-6">-->
-        <!--                      &lt;!&ndash;      E-MAIL&ndash;&gt;-->
-        <!--                      <div class="form-control" :class="{ invalid: emailValid }">-->
-        <!--                        <label class="mt-3" for="mail">E-mailadres *</label>-->
-        <!--                        <input id="mail" name="mail" type="text" @blur="validateEmail" v-model.trim="email">-->
-        <!--                        <p v-if="emailValid === 'invalid'">Gelieve een geldig e-mailadres in te geven</p>-->
-        <!--                      </div>-->
-        <!--                    </div>-->
-
-        <!--                    <div class="col-xl-6 col-lg-6 col-md-6">-->
-        <!--                      &lt;!&ndash;      TEL&ndash;&gt;-->
-        <!--                      <div class="form-control" :class="{ invalid: telValid }">-->
-        <!--                        <label class="mt-3" for="telephone">Telefoon *</label>-->
-        <!--                        <input id="telephone" name="telephone" type="tel" @blur="validateTel" v-model.trim="telephone">-->
-        <!--                        <p v-if="telValid === 'invalid'">Gelieve een geldig telefoonnummer in te geven</p>-->
-        <!--                      </div>-->
-        <!--                    </div>-->
-        <!--                  </div>-->
-
-        <!--                  <div class="row">-->
-        <!--                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">-->
-
-        <!--                      &lt;!&ndash;      UW BERICHT&ndash;&gt;-->
-        <!--                      <div class="form-control mb-xl-0 pb-xl-0 mb-lg-0 pb-ld-0 mb-md-5 pb-md-5"-->
-        <!--                           :class="{ invalid: msgValid }">-->
-        <!--                        <label class="mt-3 pt-3" for="message">Uw-bericht *</label><br>-->
-        <!--                        <textarea id="message" name="message" @blur="validateinput" v-model.trim="message"></textarea>-->
-        <!--                        <p v-if="msgValid === 'invalid'">Gelieve een bericht mee te geven</p>-->
-        <!--                      </div>-->
-        <!--                    </div>-->
-        <!--                  </div>-->
-        <!--            <div class="row">-->
-        <!--              <div class="offset-xl-0 col-xl-12 offset-lg-4 col-lg-6 col-md-10">-->
-
-        <!--      SEND BUTTON-->
-        <!--                <div class="form-control mt-xl-5 mt-lg-5 mt-md-5 pt-xl-5 pt-lg-5 pt-md-5 mt-md-5 pt-md-5">-->
-        <!--                  <button class="px-5 py-2 border-0 g-recaptcha"-->
-        <!--                          data-sitekey="???"-->
-        <!--                          data-callback='onSubmit'-->
-        <!--                          data-action='submit'-->
-        <!--                  >Verzenden-->
-        <!--                  </button>-->
-        <!--                </div>-->
-        <!--              </div>-->
-        <!--            </div>-->
-
-        <!--                </form>-->
-        <!--              </div>-->
-        <!--            </div>-->
       </div>
     </div>
   </div>
@@ -173,20 +107,43 @@ export default {
       telValid: 'pending',
       message: '',
       msgValid: 'pending',
-      showSuccesMessage: false,
-      // mailBody: {
-      //   name: "test naam",
-      //   company: "test bedrijf",
-      //   email: "test email",
-      //   telephone: "test telefoon",
-      //   message: "test bericht"
-      // }
+      showSuccessMessage: false,
+
+
+      showAlert: false,
+      progressBarWidth: "0%",
+      timerDuration: 3500, // Timerduur in milliseconden
+      timerInterval: null,
+      numSteps: 50, // Aantal stapjes voor de transitie
+      stepDuration: 50 // Tijdsduur van elke stap in milliseconden
+
     }
   },
   methods: {
+    startTimer() {
+      this.showAlert = true;
+      this.progressBarWidth = "0%";
+
+      const stepWidth = 100 / this.numSteps;
+      let currentStep = 0;
+
+      this.timerInterval = setInterval(() => {
+        currentStep++;
+
+        if (currentStep <= this.numSteps) {
+          this.progressBarWidth = stepWidth * currentStep + "%";
+        } else {
+          clearInterval(this.timerInterval);
+          this.showAlert = false;
+        }
+      }, this.timerDuration / this.numSteps);
+    },
+
     submitForm(event) {
       event.preventDefault();
 
+      const currentDate = new Date();
+      const formattedDate = currentDate.toISOString().replace('T', ' ').substring(0, 19);
 
       axios.post('https://mailqueue-d3bed9d20554.victhorious.com/api/mail/send', {
         from_email: 'noreply@smstools.be',
@@ -194,18 +151,37 @@ export default {
         to_email: this.email,
         cc: [],
         bcc: [],
-        body: "<h1>Test</h1>",
+        body: `
+            <img src="https://www.smstools.be/assets/images/logo_dark2.webp" alt="logo Smstools">
+            <p><font size="3">Beste <b>${this.name}</b></p>
+            <p>Wij hebben uw bericht succesvol ontvangen. Wij kijken ernaar uit u van dienst te zijn!</p>
+
+            <br><h4>U contacteerde ons om de volgende reden:</h4>
+            <p>${this.message}</p>
+            <hr>
+            <p>Onze customer support zal u zo snel mogelijk verder helpen.</p>
+
+            <br><p>Met vriendelijke groeten</p>
+            <p>Customer support Smstools</p>
+            `,
         subject: 'Smstools WhatsApp Contactform',
         tags: ['Graduaatsproef'],
         format: 'html',
-        // date: '2023-06-20 hh:mm:ss'
+        date: formattedDate
       }, {
         headers: {
           'X-Authorization': '7BZk3b7Krd956RSIwiP18NUVojXgEYpMFUu5IBqB9MRBSnBfy9I3GiXB9C84tGCZ',
         }
       })
           .then(function (response) {
-            console.log(response);
+            // alert(response)
+            this.showSuccessMessage = true;
+            // console.log(response);
+            this.name = ''
+            this.company = ''
+            this.email = ''
+            this.telephone = ''
+            this.message = ''
           })
           .catch(function (error) {
             console.log(error);
@@ -325,27 +301,63 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "src/scss/base";
+
+//#alert {
+//position: absolute;
+//width: 100%;
+//background-size: cover;
+//height: 100%;
+//background-color: rgba(0, 0, 0, 0.16);
+
+#succes {
+  height: 15%;
+  width: 25%;
+  position: fixed;
+  z-index: 100;
+  top: 1.5%;
+  right: 1.5%;
+  background-color: $colorTertiary;;
+  //background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 1%;
+
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 8%;
+    border-radius: 0 0 0 10px;
+    background-color: $colorSecondary;
+    transition: width 0.1s ease-in-out;
+    //transition: width 0.1s;
+  }
+}
+
+//}
+
+
+p {
+  color: $colorPrimary;
+  padding: 5% 2.5%;
+  border-radius: 10px;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+//}
 
 #background_contact {
   background: $greyBackground;
+  position: relative;
+
   #contact {
     background: $colorSecondary;
     top: -100px;
-
-    //#succes {
-    //  width: 100%;
-    //
-    //  p {
-    //    color: #ffffff;
-    //    padding: 5% 2.5%;
-    //    background: green;
-    //    position: absolute;
-    //    top: 0;
-    //    right: 0;
-    //  }
-    //}
 
     #contact_img {
       width: 100%;
@@ -389,6 +401,7 @@ export default {
         font-size: .85rem;
         font-weight: bold;
       }
+
       p#textarea {
         padding: 1% 0;
       }
@@ -416,9 +429,9 @@ export default {
 
       textarea {
         height: 10rem;
+        padding: 3% 1.5%;
+        max-width: 100%;
       }
-
-      //}
 
       button {
         background: #ffffff;
@@ -476,6 +489,7 @@ export default {
       h3 {
         font-size: $FontSizeH3Mobile;
       }
+
       p {
         font-size: .75rem;
       }
@@ -489,6 +503,7 @@ export default {
       h3 {
         font-size: .9rem;
       }
+
       p {
         font-size: .75rem;
       }
