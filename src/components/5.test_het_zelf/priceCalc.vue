@@ -1,17 +1,17 @@
 <template>
-  <div id="pricecalc">
+  <div id="pricecalc" class="pt-4">
     <div class="container-fluid p-0 w-100">
       <div class="container-xl pt-5">
         <!--      <flagstrap :selected="selectedCountry" @changed="handleCountryChange"></flagstrap>-->
 
-        <div class="row">
+        <div class="row" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="1200">
           <div class="offset-xl-0 col-xl-12 offset-lg-0 col-lg-7 offset-md-0 col-md-12" id="title">
-            <h2>Verstuur online sms'en<br>via onze SMS software en/of API</h2>
+            <h2>Verstuur online sms'en<br>via onze SMS-software en/of API</h2>
           </div>
         </div>
         <div class="row">
           <div
-              class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-12 offset-sm-0 col-sm-12 offset-0 col-12">
+              class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-12 offset-sm-0 col-sm-12 offset-0 col-12" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="1200">
             <p>Bent u klaar voor het avontuur met Smstools?</p>
             <p>Bereken hier de totale kosten voor het versturen van sms-berichten. Bij ons betaalt u alleen voor wat u
               verbruikt, zonder setup- of maandelijkse kosten.</p>
@@ -20,7 +20,7 @@
               voor postpaid-opties!</p>
           </div>
           <div class="offset-xl-0 col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-12 col-sm-12 col-12"
-               id="pricecalc_section">
+               id="pricecalc_section" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="1200">
             <div id="calc">
               <div class="row p-0">
                 <div
@@ -140,11 +140,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/base";
+@import "/src/scss/base";
 
 #pricecalc {
   #wave {
-    background: url("src/assets/TestHetZelf/TestHetZelf_wave.png") no-repeat;
+    background: url("/src/assets/TestHetZelf/TestHetZelf_wave.webp") no-repeat;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -211,6 +211,7 @@ export default {
       width: 80%;
       padding: 5% 0 5% 5%;
       border-radius: 10px;
+      font-weight: 700;
     }
 
     option {
