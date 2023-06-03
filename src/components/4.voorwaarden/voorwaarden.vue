@@ -2,16 +2,17 @@
   <!--  <div id="voorwaarden" data-spy="scroll" data-target=".navbar" data-offset="50">-->
 
   <div id="voorwaarden" class="py-5">
-    <div class="container-xl">
+    <div class="container-xl pt-5">
       <div class="row">
         <div class="offset-xl-0 col-xl-6 offset-lg-1 col-lg-10 offset-md-1 col-md-10 offset-sm-1 col-sm-10 offset-1 col-10">
-          <div class="row">
-            <h2 class="mb-3">Belangrijke voorwaarden en richtlijnen<br>voor WhatsApp bij smstools</h2>
-            <p>Ontdek de belangrijke voorwaarden en richtlijnen voor het gebruik van WhatsApp bij Smstools. Leer meer over de vereisten en regels die van toepassing zijn om WhatsApp veilig en verantwoordelijk te gebruiken via Smstools.</p>
+          <div class="row" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="1200">
+<!--            <h2 class="mb-3">Belangrijke voorwaarden en richtlijnen<br>voor WhatsApp bij smstools</h2>-->
+            <h2 class="mb-3">{{this.titleTerms}}</h2>
+            <p>{{this.introTerms}}</p>
           </div>
         </div>
-        <div class="offset-xl-0 offset-lg-1 offset-md-1 col-xl-6 col-lg-10 col-md-10 offset-sm-0 col-sm-12 offset-0 col-12 mt-xl-0 mt-lg-4 mt-md-4 pl-sm-4">
-          <div class="accordion mt-3">
+        <div class="offset-xl-0 m-xl-0 offset-lg-1 offset-md-1 col-xl-6 col-lg-10 col-md-10 offset-sm-0 col-sm-11 ml-sm-2 offset-0 col-12 mt-xl-0 mt-lg-4 mt-md-4 pl-sm-4">
+          <div class="accordion mt-3" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="1200">
             <div v-for="(item, index) in visibleItems" :key="item.id" class="terms-item">
               <button @click="toggleAccordion(item.id)" :class="{ active: item.toggle }">
                 <span>{{ item.term }}</span>
@@ -36,47 +37,6 @@
         </div>
       </div>
     </div>
-
-<!--    <div class="container-xl py-5 pl-xl-0 pl-lg-5 pl-md-5 pl-sm-5 pl-5">-->
-<!--      <div class="row">-->
-<!--        <div class="offset-xl-0 offset-lg-0 col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">-->
-<!--          <h2 class="mb-4">Belangrijke voorwaarden en richtlijnen<br>voor WhatsApp bij smstools</h2>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--          <div class="offset-xl-0 offset-lg-0 col-xl-6 col-lg-10 col-md-11 col-sm-11 col-11 pl-xl-4 pl-lg-4 pl-md-4 pl-sm-4 pl-4">-->
-<!--            <p>Ontdek de belangrijke voorwaarden en richtlijnen voor het gebruik van WhatsApp bij Smstools. Leer meer-->
-<!--              over-->
-<!--              de vereisten en regels die van toepassing zijn om WhatsApp veilig en verantwoordelijk te gebruiken via-->
-<!--              Smstools.</p>-->
-<!--          </div>-->
-<!--          <div class="offset-xl-0 offset-lg-1 offset-md-1 col-xl-6 col-lg-10 col-md-10 col-sm-11 col-11 mt-xl-0 mt-lg-4 mt-md-4 pl-sm-4">-->
-<!--            <div class="accordion">-->
-<!--              <div v-for="(item, index) in visibleItems" :key="item.id" class="terms-item">-->
-<!--                <button @click="toggleAccordion(item.id)" :class="{ active: item.toggle }">-->
-<!--                  <span>{{ item.term }}</span>-->
-<!--&lt;!&ndash;                  <transition name="accordion-transition" mode="out-in">&ndash;&gt;-->
-<!--                    <i :class="item.toggle ? 'fas fa-minus' : 'fas fa-plus'"></i>-->
-<!--&lt;!&ndash;                  </transition>&ndash;&gt;-->
-<!--                </button>-->
-<!--                <transition name="accordion-transition" mode="out-in">-->
-<!--                  <div v-if="item.toggle" :key="'content-' + item.id" class="terms-content">-->
-<!--                    <p>{{ item.termInfo }}</p>-->
-<!--                  </div>-->
-<!--                </transition>-->
-<!--              </div>-->
-<!--              <div v-if="!showAllItems && visibleItems.length < accordionItems.length" class="show-more">-->
-<!--                <button @click="showMore" :style="styleButtonInactive">Lees meer</button>-->
-<!--              </div>-->
-<!--              <div v-if="showAllItems && visibleItems.length > 2" class="show-more">-->
-<!--                <button @click="showLess" :style="styleButtonActive ">Lees minder</button>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
 </template>
 
 <script>
@@ -85,35 +45,43 @@ export default {
   data() {
     return {
       open: false,
+      titleTerms: "Belangrijke voorwaarden en richtlijnen\n" +
+          "voor WhatsApp bij smstools",
+      introTerms: "Ontdek de belangrijke voorwaarden en richtlijnen voor het gebruik van WhatsApp bij Smstools. Leer meer over de vereisten en regels die van toepassing zijn om WhatsApp veilig en verantwoordelijk te gebruiken via Smstools.",
       accordionItems: [
         {
           id: 1,
           term: 'Naleving van de geldende wetten en regelgeving',
-          termInfo: 'Gebruikers moeten ervoor zorgen dat ze zich houden aan de wetten en voorschriften met betrekking tot privacy, auteursrechten en intellectueel eigendom bij het verzenden van berichten via WhatsApp.',
+          // termInfo: 'Gebruikers moeten ervoor zorgen dat ze zich houden aan de wetten en voorschriften met betrekking tot privacy, auteursrechten en intellectueel eigendom bij het verzenden van berichten via WhatsApp.',
+          termInfo: 'U moet ervoor zorgen dat u zich houdt aan de wetten en voorschriften met betrekking tot privacy, auteursrechten en intellectueel eigendom bij het verzenden van berichten via WhatsApp.',
           toggle: false,
         },
         {
           id: 2,
           term: 'Algemene gebruiksvoorwaarden van WhatsApp',
-          termInfo: 'Gebruikers dienen de algemene gebruiksvoorwaarden van WhatsApp zelf te accepteren en te volgen, aangezien deze belangrijke informatie bevatten over het gebruik van de app en de verantwoordelijkheden van de gebruikers.',
+          // termInfo: 'Gebruikers dienen de algemene gebruiksvoorwaarden van WhatsApp zelf te accepteren en te volgen, aangezien deze belangrijke informatie bevatten over het gebruik van de app en de verantwoordelijkheden van de gebruikers.',
+          termInfo: 'U dient de algemene gebruiksvoorwaarden van WhatsApp zelf te accepteren en te volgen, aangezien deze belangrijke informatie bevatten over het gebruik van de app en uw verantwoordelijkheden.',
           toggle: false,
         },
         {
           id: 3,
           term: 'Privacybeleid',
+          // termInfo: 'Het is essentieel om het privacybeleid van WhatsApp en het betreffende sms-toolbedrijf zorgvuldig door te nemen om te begrijpen hoe uw gegevens worden verzameld, gebruikt en gedeeld.',
           termInfo: 'Het is essentieel om het privacybeleid van WhatsApp en het betreffende sms-toolbedrijf zorgvuldig door te nemen om te begrijpen hoe uw gegevens worden verzameld, gebruikt en gedeeld.',
           toggle: false,
         },
         {
           id: 4,
           term: 'Verantwoordelijkheid voor verzonden inhoud',
-          termInfo: 'Gebruikers zijn verantwoordelijk voor de inhoud die ze verzenden via WhatsApp. Het is belangrijk om geen ongepaste, illegale of schadelijke inhoud te delen en ervoor te zorgen dat de rechten van anderen worden gerespecteerd.',
+          // termInfo: 'Gebruikers zijn verantwoordelijk voor de inhoud die ze verzenden via WhatsApp. Het is belangrijk om geen ongepaste, illegale of schadelijke inhoud te delen en ervoor te zorgen dat de rechten van anderen worden gerespecteerd.',
+          termInfo: 'U bent verantwoordelijk voor de inhoud die u verzendt via WhatsApp. Het is belangrijk om geen ongepaste, illegale of schadelijke inhoud te delen en ervoor te zorgen dat de rechten van anderen worden gerespecteerd.',
           toggle: false,
         },
         {
           id: 5,
           term: 'Beveiliging van het WhatsApp-account',
-          termInfo: 'Gebruikers moeten passende maatregelen nemen om de beveiliging van hun WhatsApp-account te waarborgen, zoals het gebruik van sterke wachtwoorden, het inschakelen van tweestapsverificatie en het vermijden van het delen van accountgegevens met anderen.',
+          // termInfo: 'Gebruikers moeten passende maatregelen nemen om de beveiliging van hun WhatsApp-account te waarborgen, zoals het gebruik van sterke wachtwoorden, het inschakelen van tweestapsverificatie en het vermijden van het delen van accountgegevens met anderen.',
+          termInfo: 'U moet passende maatregelen nemen om de beveiliging van uw WhatsApp-account te waarborgen, zoals het gebruik van sterke wachtwoorden, het inschakelen van tweestapsverificatie en het vermijden van het delen van accountgegevens met anderen.',
           toggle: false,
         },
 
@@ -167,29 +135,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/base";
+@import "/src/scss/base";
 
 #voorwaarden {
   background: $colorTertiary;
-  border-radius: 0 0 0 250px;
+  overflow: hidden;
+
   /*------------------------------------*/
   .accordion {
     margin-bottom: 20px;
-
-    //.accordion-icon-transition-enter-active,
-    //.accordion-icon-transition-leave-active {
-    //  transition: transform 0.3s;
-    //}
-    //
-    //
-    //.accordion-icon-transition-enter {
-    //  transform: rotate(180deg);
-    //}
-    //
-    //.accordion-icon-transition-leave-to {
-    //  transform: rotate(0deg);
-    //}
-
 
     i {
       margin-right: 2.5%;
