@@ -10,7 +10,7 @@
     {
       "number": 2,
       "title": "Automatiseer klantencommunicatie",
-      "description": "Bespaar tijd en verhoog de klanttevredenheid met onze handige interface, waarmee u berichten kunt automatiseren, gepersonaliseerde meldingen kunt verzenden en snelle klantenservice kunt bieden. Profiteer van de krachtige mogelijkheden van Whatsapp bij Smstools.",
+      "description": "Bespaar tijd en verhoog de klanttevredenheid met onze handige interface, waarmee u berichten kunt automatiseren, gepersonaliseerde meldingen kunt verzenden en snelle klantenservice kunt bieden. \n Profiteer van de krachtige mogelijkheden van Whatsapp bij Smstools.",
       "class": "mr-xl-0 ml-xl-4 mr-lg-0 ml-lg-4"
     },
     {
@@ -55,21 +55,30 @@
       "title": "Realtime notificaties voor uw klanten",
       "icon": "bi bi-bell",
       "description": "Houd klanten op de hoogte met realtime meldingen voor boekingsbevestigingen, bezorging waarschuwingen en service herinneringen.\n\nOnze software maakt het mogelijk om chatberichten te verzenden en ontvangen, waardoor u constant in contact kunt blijven met uw klanten, ongeacht hun locatie. Dankzij onze software kunt u een optimale chatervaring bieden aan uw klanten, waarbij ze gemakkelijk met u kunnen communiceren en hun vragen en behoeften kunnen uiten.\nMet realtime notificaties kunt u direct reageren en waardevolle interacties aangaan, waardoor u de tevredenheid en loyaliteit van uw klanten kunt vergroten.",
-      "image": "img-notis.webp"
+      "image": "img-notis.webp",
+      "aosImg": "fade-up",
+      "aosTxt": "fade-left",
+      "duration": "1200"
     },
     {
       "id": 2,
       "title": "Stimuleer uw verkoop dankzij Whatsapp Conversies",
       "icon": "bi bi-rocket-takeoff",
       "description": "Met onze geavanceerde software kunt u direct contact leggen met uw klanten via Whatsapp, waardoor u gepersonaliseerde communicatie kunt bieden die de verkoop bevordert. Profiteer van functies zoals het versturen van afbeeldingen, video's en documenten om uw producten visueel aantrekkelijk te presenteren. Geautomatiseerde berichten en autoresponders zorgen voor snelle respons en een optimale klantenservice-ervaring. Met Whatsapp Conversies kunt u de effectiviteit van uw marketing meten en optimaliseren. Bereik uw klanten op een directe en persoonlijke manier, en creëer een positieve koopervaring die leidt tot groei en succes voor uw bedrijf.",
-      "image": "img-stimuleer_verkoop.webp"
+      "image": "img-stimuleer_verkoop.webp",
+      "aosImg": "fade-up",
+      "aosTxt": "fade-right",
+      "duration": "1200"
     },
     {
       "id": 3,
       "title": "Reageer rechtstreeks op vragen van klanten via onze software",
       "icon": "bi bi-headset",
-      "description": "Verbeter uw klantenservice en versterk uw klantrelaties door rechtstreeks te reageren op vragen van klanten via onze gebruiksvriendelijke software. Met onze krachtige tool kunt u direct communiceren met uw klanten, waardoor u snelle en gepersonaliseerde antwoorden kunt bieden. Dankzij de realtime chatfunctionaliteit kunt u direct inspelen op vragen, zorgen of verzoeken van uw klanten, wat resulteert in een betere klanttevredenheid en loyaliteit. Bied uw klanten een geweldige ervaring door direct en effectief te reageren op hun vragen, en versterk zo de band met uw klantenkring.",
-      "image": "img-support_communicatie.webp"
+      "description": "Verbeter uw klantenservice door direct in te gaan op vragen van klanten via onze gebruiksvriendelijke software. Creëer een uitstekende klantervaring door gerichte en effectieve antwoorden te bieden en versterk zo de band met uw klanten.",
+      "image": "img-support_communicatie.webp",
+      "aosImg": "fade-up",
+      "aosTxt": "fade-left",
+      "duration": "1200"
     }
   ]
 }

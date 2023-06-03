@@ -5,7 +5,6 @@
   "navigate": [
     {"tab": "Voorwaarden", "link": "#voorwaarden"},
     {"tab": "Test het zelf", "link": "#test-het-zelf"},
-    {"tab": "Use cases", "link": "#use-cases"},
     {"tab": "Contact", "link": "#contact"}
   ],
   "dropdownHead": "Over WhatsApp",

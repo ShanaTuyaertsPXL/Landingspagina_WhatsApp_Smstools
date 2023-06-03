@@ -1,11 +1,10 @@
 {
-  "brand": "Smstools-Dark.png",
+  "brand": "Smstools-Dark.webp",
   "linkBrand": "",
   "alt": "Smstools logo",
   "tabs": [
     {"tab": "Voorwaarden", "link": "#voorwaarden"},
     {"tab": "Test het zelf", "link": "#test-het-zelf"},
-    {"tab": "Use cases", "link": "#use-cases"},
     {"tab": "Contact", "link": "#contact"}
   ],
   "dropdownHead": "Over WhatsApp",
