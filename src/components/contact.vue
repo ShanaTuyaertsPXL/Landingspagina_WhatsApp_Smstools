@@ -1,26 +1,30 @@
 <template>
   <!--  <div id="contact" data-spy="scroll" data-target=".navbar" data-offset="50">-->
-  <!--            <div v-if="showSuccessMessage" id="succes">-->
+  <!--              <div v-if="showSuccessMessage" id="succes">-->
   <div v-if="showAlert" id="succes">
     <div id="alert">
       <div class="progress-bar" :style="{ width: progressBarWidth }"></div>
-      <p>Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
+      <div><i class="bi bi-check-circle"></i>
+        <p>Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
+      </div>
     </div>
   </div>
-<!--    <button @click="startTimer">Toon alert</button>-->
+  <!--    <button @click="startTimer">Toon alert</button>-->
 
   <div id="background_contact">
     <div id="wave_contact"></div>
     <div id="contact">
       <div class="container-xl pb-5">
         <div class="row">
-          <div class="col-12 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-3 mb-3 mt-4 text-center">
+          <div class="col-12 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-3 mb-3 mt-4 text-center" data-aos="fade-up"
+               data-aos-duration="1200" data-aos-offset="1200">
             <h2>Contacteer ons</h2>
           </div>
         </div>
         <div class="row">
           <div
-              class="offset-xl-0 col-xl-7 offset-lg-2 col-lg-8 offset-md-2 col-md-8  order-xl-1 order-lg-2 order-md-2 order-sm-2 order-2">
+              class="offset-xl-0 col-xl-7 offset-lg-2 col-lg-8 offset-md-2 col-md-8  order-xl-1 order-lg-2 order-md-2 order-sm-2 order-2"
+              data-aos="fade-right" data-aos-duration="1200" data-aos-offset="1200">
             <form @submit="submitForm" method="POST" action="mailto: shana.tuyaerts@student.pxl.be"
                   enctype="text/plain">
               <div class="row  text-xl-left text-lg-left text-md-left text-sm-left text-center">
@@ -55,7 +59,11 @@
                     class="col-xl-6 offset-lg-0 col-lg-6 offset-md-0 col-md-6 offset-sm-0 col-sm-6 offset-1 col-10 mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-4">
                   <!--                <div class="form-control">-->
                   <label>Telefoon *</label><br>
-                  <input id="telephone" name="telephone" type="text" @blur="validateTel" v-model.trim="telephone">
+                  <!--                  <vue-tel-input v-model="phone"></vue-tel-input>-->
+
+                  <!--                  <vue-tel-input v-model="telefoonnummer" :showFlags="true"></vue-tel-input>-->
+                  <!--                  <vue-tel-input v-model="telefoonnummer" :showFlags="true" :showDialCode="true"></vue-tel-input>-->
+                  <input id="telephone" name="telephone" type="tel" @blur="validateTel" v-model.trim="telephone">
                   <p v-if="telValid === 'invalid'">Gelieve een geldig telefoonnummer in te geven</p>
                   <!--                </div>-->
                 </div>
@@ -80,8 +88,9 @@
             </form>
           </div>
           <div
-              class="offset-xl-0 col-xl-5 offset-lg-3 col-lg-6 offset-md-3 col-md-6 offset-sm-2 col-sm-8 offset-2 col-8  order-xl-2 order-lg-1 order-md-1 order-sm-1 order-1 pl-xl-5 pl-lg-0 pl-md-0 pl-sm-0 pl-0">
-            <img src="src/assets/Contact/Sevinç_contact.png" class="mb-xl-0 mb-lg-4 mb-md-4 mb-sm-4 mb-4"
+              class="offset-xl-0 col-xl-5 offset-lg-3 col-lg-6 offset-md-3 col-md-6 offset-sm-2 col-sm-8 offset-2 col-8  order-xl-2 order-lg-1 order-md-1 order-sm-1 order-1 pl-xl-5 pl-lg-0 pl-md-0 pl-sm-0 pl-0"
+              data-aos="fade-left" data-aos-duration="1200" data-aos-offset="1200">
+            <img src="/src/assets/Contact/Sevinç_contact.webp" class="mb-xl-0 mb-lg-4 mb-md-4 mb-sm-4 mb-4"
                  id="contact_img" alt="contact image">
           </div>
         </div>
@@ -92,11 +101,18 @@
 
 <script>
 import axios from 'axios';
+// import inttelinput from '/src/components/intltelinput.js'
+// import VueTelInput from 'vue-tel-input';
+// import {ref} from 'vue';
+// import {VueTelInput} from 'vue-tel-input';
+// import 'vue-tel-input/dist/vue-tel-input.css';
+
 
 export default {
   name: "contact",
   data() {
     return {
+      // inttelinput: inttelinput,
       name: '',
       nameValid: 'pending',
       company: '',
@@ -115,11 +131,71 @@ export default {
       timerDuration: 3500, // Timerduur in milliseconden
       timerInterval: null,
       numSteps: 50, // Aantal stapjes voor de transitie
-      stepDuration: 50 // Tijdsduur van elke stap in milliseconden
+      stepDuration: 50, // Tijdsduur van elke stap in milliseconden
 
+
+      inputEl: document.getElementById("telephone"),
+      goodKey: "0123456789+ ",
+      phoneNumber: ''
     }
   },
+  // components: {
+  //   VueTelInput
+  // },
+  // setup() {
+  //   const phone = ref(null);
+  //
+  //   return {
+  //     value,
+  //   };
+  // },
   methods: {
+    // checkInputTel(event) {
+    //   let key = typeof event.which == "number" ? event.which : event.keyCode;
+    //   let start = this.selectionStart,
+    //       end = this.selectionEnd;
+    //
+    //   let filtered = this.value.split("").filter(filterInput);
+    //   this.value = filtered.join("");
+    //
+    //   /* Prevents moving the pointer for a bad character */
+    //   let move =
+    //       this.filterInput(String.fromCharCode(key)) || key == 0 || key == 8 ? 0 : 1;
+    //   this.setSelectionRange(start - move, end - move);
+    // },
+    // filterInput(event) {
+    //   return this.goodKey.indexOf(event) > -1;
+    // },
+
+    //   script() {
+    //     inputEl.addEventListener("input", this.checkInputTel);
+    //   },
+    //
+    //   getIp(callback) {
+    //     fetch("https://ipinfo.io/json?token=25170116de0e36", {
+    //       headers: {Accept: "application/json"},
+    //     })
+    //         .then((resp) => resp.json())
+    //         .catch(() => {
+    //           return {
+    //             country: "be",
+    //           };
+    //         })
+    //         .then((resp) => callback(resp.country));
+    //   }
+    // },
+    //
+    // script2() {
+    //   const phoneInputField = document.querySelector("#telefoon");
+    //   const phoneInput = window.intlTelInput(phoneInputField, {
+    //         initialCountry: "auto",
+    //         geoIpLookup: getIp,
+    //         utilsScript:
+    //             "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    //       }
+    // },
+
+
     startTimer() {
       this.showAlert = true;
       this.progressBarWidth = "0%";
@@ -139,15 +215,12 @@ export default {
       }, this.timerDuration / this.numSteps);
     },
 
-    submitForm(event) {
-      event.preventDefault();
-
-      const currentDate = new Date();
-      const formattedDate = currentDate.toISOString().replace('T', ' ').substring(0, 19);
+    sendMailToUser() {
+      const tempThisUser = this
 
       axios.post('https://mailqueue-d3bed9d20554.victhorious.com/api/mail/send', {
         from_email: 'noreply@smstools.be',
-        from_name: 'Smstools WhatsApp Contactform',
+        from_name: 'Smstools WhatsApp',
         to_email: this.email,
         cc: [],
         bcc: [],
@@ -164,7 +237,7 @@ export default {
             <br><p>Met vriendelijke groeten</p>
             <p>Customer support Smstools</p>
             `,
-        subject: 'Smstools WhatsApp Contactform',
+        subject: 'SMStools Ondersteuning WhatsApp',
         tags: ['Graduaatsproef'],
         format: 'html',
         date: formattedDate
@@ -174,64 +247,73 @@ export default {
         }
       })
           .then(function (response) {
-            // alert(response)
-            this.showSuccessMessage = true;
-            // console.log(response);
-            this.name = ''
-            this.company = ''
-            this.email = ''
-            this.telephone = ''
-            this.message = ''
+            console.log(response)
+            // console.log(tempThis)
+            tempThisUser.showSuccessMessage = true;
+            tempThisUser.name = '';
+            tempThisUser.company = '';
+            tempThisUser.email = '';
+            tempThisUser.telephone = '';
+            tempThisUser.message = '';
+
+
+            //Functie voor axios oproepen
+            //Functie voor mail versturen
           })
           .catch(function (error) {
             console.log(error);
           });
+    },
 
-      // Verstuur het formulier naar de API
-      //   fetch('https://mailqueue-d3bed9d20554.victhorious.com/api/mail/send', {
-      //     // mode: 'no-cors',
-      //     method: 'POST',
-      //     headers: {
-      //       // 'Content-Type': 'application/json',
-      //       'Content-Type': 'text/html; charset=utf-8',
-      //       'X-Authorization': '7BZk3b7Krd956RSIwiP18NUVojXgEYpMFUu5IBqB9MRBSnBfy9I3GiXB9C84tGCZ',
-      //       'Accept': '*/*'
-      //     },
-      //     body: JSON.stringify({
-      //       from_email: 'noreply@smstools.be',
-      //       from_name: 'Smstools WhatsApp Contactform',
-      //       to_email: this.email,
-      //       cc: [],
-      //       bcc: [],
-      //       body: {
-      //         name: this.name,
-      //         company: this.company,
-      //         email: this.email,
-      //         telephone: this.telephone,
-      //         message: this.message
-      //       },
-      //       subject: 'Smstools WhatsApp Contactform',
-      //       tags: 'Graduaatsproef',
-      //       format: 'html'
-      //     })
-      //   })
-      //       .then(response => {
-      //         console.log(response)
-      //         if (response.ok) {
-      //           alert('Bedankt voor je bericht!');
-      //           this.name = '';
-      //           this.company = '';
-      //           this.email = '';
-      //           this.telephone = '';
-      //           this.message = '';
-      //         } else {
-      //           alert('Er is een probleem opgetreden bij het verzenden van het formulier. Probeer het later opnieuw.');
-      //         }
-      //       })
-      //       .catch(error => {
-      //         alert('Er is een fout opgetreden bij het verzenden van het formulier. Probeer het later opnieuw.');
-      //         console.error(error);
-      //       });
+
+    submitForm(event) {
+      event.preventDefault();
+
+      const currentDate = new Date();
+      const formattedDate = currentDate.toISOString().replace('T', ' ').substring(0, 19);
+      const tempThis = this //scope probleem this
+
+      axios.post('https://mailqueue-d3bed9d20554.victhorious.com/api/mail/send', {
+        from_email: 'noreply@smstools.be',
+        from_name: 'Smstools WhatsApp',
+        to_email: this.email,
+        cc: [],
+        bcc: [],
+        body: `
+        <h3>Nieuw inkomend bericht</h3>
+        <p>Volledige naam:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.name}</p>
+        <p>Bedrijf:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.company}</p>
+        <p>E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.email}</p>
+        <p>Telefoon:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.telephone}</p>
+        <p>Bericht:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.message}</p>
+        `,
+        subject: 'SMStools Ondersteuning WhatsApp',
+        tags: ['Graduaatsproef'],
+        format: 'html',
+        date: formattedDate
+      }, {
+        headers: {
+          'X-Authorization': '7BZk3b7Krd956RSIwiP18NUVojXgEYpMFUu5IBqB9MRBSnBfy9I3GiXB9C84tGCZ',
+        }
+      })
+          .then(function (response) {
+            // console.log(response)
+            // console.log(tempThis)
+            tempThis.showSuccessMessage = true;
+            tempThis.name = '';
+            tempThis.company = '';
+            tempThis.email = '';
+            tempThis.telephone = '';
+            tempThis.message = '';
+
+            this.sendMailToUser()
+
+            //Functie voor axios oproepen
+            //Functie voor mail versturen
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     },
 
 
@@ -297,12 +379,19 @@ export default {
 
       }
     },
+    // watch: {
+    //   telephone(newValue) {
+    //     // Voer eventuele validatie of transformatie uit op de ingevoerde telefoonnummerwaarde
+    //     console.log(newValue);
+    //   }
+    // }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "src/scss/base";
+@import "/src/scss/base";
+@import '../../node_modules/flag-icon-css/css/flag-icons.css';
 
 //#alert {
 //position: absolute;
@@ -312,8 +401,8 @@ export default {
 //background-color: rgba(0, 0, 0, 0.16);
 
 #succes {
-  height: 15%;
-  width: 25%;
+  height: 20%;
+  width: 23%;
   position: fixed;
   z-index: 100;
   top: 1.5%;
@@ -323,17 +412,28 @@ export default {
   box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.16);
   border-radius: 10px;
   text-align: center;
-  padding-top: 1%;
+  padding: 0;
 
   .progress-bar {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 8%;
+    height: 6%;
     border-radius: 0 0 0 10px;
     background-color: $colorSecondary;
     transition: width 0.1s ease-in-out;
     //transition: width 0.1s;
+  }
+
+  p {
+    padding: 0;
+  }
+
+  .bi-check-circle {
+    font-size: 3rem;
+    color: $colorSecondary;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -358,6 +458,7 @@ p {
   #contact {
     background: $colorSecondary;
     top: -100px;
+    overflow: hidden;
 
     #contact_img {
       width: 100%;
@@ -454,7 +555,7 @@ p {
   }
 
   #wave_contact {
-    background: url("src/assets/Contact/Wave_contact.png") no-repeat;
+    background: url("/src/assets/Contact/Wave_contact.webp") no-repeat;
     background-size: cover;
     margin: 0;
     padding: 0;
