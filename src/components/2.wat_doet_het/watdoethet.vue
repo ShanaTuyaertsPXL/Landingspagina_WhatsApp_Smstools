@@ -6,13 +6,15 @@
     <div class="container-xl py-5 mb-5" id="verschillende_manieren">
       <div class="row">
         <div class="col">
-          <h2 class="mb-0 py-xl-5 py-lg-5 py-md-5 py-sm-5 py-0">{{ WatDoetHet.title_verschillendeManieren }}</h2>
+          <h2 class="mb-0 py-xl-5 py-lg-5 py-md-5 py-sm-5 py-0" data-aos="fade-up" data-aos-duration="1200"
+              data-aos-offset="200">{{ WatDoetHet.title_verschillendeManieren }}</h2>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="200">
         <!--        <div class="offset-xl-0 offset-lg-0 offset-md-0 offset-sm-0 offset-0 col-xl-5 col-lg-5 col-md-5 col-sm-10 col-10 mb-5 mt-sm-5 mx-xl-4 text-center two_ways_cards" v-for="item in WatDoetHet.verschillendeManieren" :key="item">-->
         <div
-            class="offset-xl-0 offset-lg-0 offset-md-0 offset-sm-0 offset-0 col-xl-5 col-lg-5 col-md-8 col-sm-10 col-10 mb-4 mt-sm-5 mt-5 text-center two_ways_cards" :class="item.class"
+            class="offset-xl-0 offset-lg-0 offset-md-0 offset-sm-0 offset-0 col-xl-5 col-lg-5 col-md-8 col-sm-10 col-10 mb-4 mt-sm-5 mt-5 text-center two_ways_cards"
+            :class="item.class"
             v-for="item in WatDoetHet.verschillendeManieren" :key="item">
           <div class="number">
             <p style="font-size: 60px; color: #DC3545; font-weight: 650">{{ item.number }}</p>
@@ -31,7 +33,7 @@
     <div id="communicatie_verbeteren" class="pt-5">
       <div class="container-xl py-xl-5 py-lg-0 py-md-0 py-sm-4 py-4">
         <div class="row">
-          <div class="col">
+          <div class="col" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="200">
             <h2 class="mt-0 mb-5 mt-xl-0 mt-lg-0 mt-md-4 mt-sm-0 mt-0 text-center d-xl-block d-lg-none d-md-none d-sm-none d-block">
               {{ WatDoetHet.title_communicatieVerbeteren }}</h2>
             <h2 class="mt-0 mb-5 mt-xl-0 mt-lg-0 mt-md-4 mt-sm-0 mt-0 text-center d-xl-none d-lg-block d-md-block d-sm-block d-none"
@@ -40,17 +42,22 @@
         </div>
         <div class="row my-0">
           <div
-              class="col-xl-5 col-lg-5 col-md-5 offset-sm-1 offset-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-5 pl-sm-5 col-sm-10 col-10 py-xl-3 py-lg-3 py-md-3 py-sm-0 py-0 my-sm-4 mt-4 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1">
+              class="col-xl-5 col-lg-5 col-md-5 offset-sm-1 offset-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-5 pl-sm-5 col-sm-10 col-10 py-xl-3 py-lg-3 py-md-3 py-sm-0 py-0 my-sm-4 mt-4 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="200">
             <img :src="imagePath + WatDoetHet.communicatieVerbeteren[1].image"
                  :alt="WatDoetHet.communicatieVerbeteren[1].image" class="info">
           </div>
-      <!--MOBILE-->
-      <!--<a href="https://www.freepik.com/free-psd/mobile-phone-screen-mockup-design_3574836.htm#query=person%20smiling%20with%20phone%20in%20hand%20trucker&position=7&from_view=search&track=ais">Image by rawpixel.com</a> on Freepik-->
-      <!--BUILDING-->
-      <!--<a href="https://www.freepik.com/free-psd/mobile-phone-screen-mockup-design_3574836.htm#query=person%20smiling%20with%20phone%20in%20hand%20trucker&position=7&from_view=search&track=ais">Image by rawpixel.com</a> on Freepik-->
 
+          <!--ATTRIBUTES-->
+            <!--MOBILE-->
+            <!--<a href="https://www.freepik.com/free-psd/mobile-phone-screen-mockup-design_3574836.htm#query=person%20smiling%20with%20phone%20in%20hand%20trucker&position=7&from_view=search&track=ais">Image by rawpixel.com</a> on Freepik-->
+
+            <!--BUILDING-->
+<!--          <a href="https://www.freepik.com/free-photo/industrial-park-factory-building-warehouse_1297020.htm#query=hangar&position=0&from_view=search&track=sph">Image by 4045</a> on Freepik-->
+
+            <!--WHATSAPP SCREEN-->
+            <!--Image by <a href="https://www.freepik.com/free-vector/whatsapp-screen-template_3049301.htm#query=WhatsApp%20screen&position=0&from_view=search&track=ais">Freepik</a>-->
           <div
-              class="col-xl-7 col-lg-7 col-md-7 pt-xl-5 pl-xl-5 pt-lg-5 mt-xl-5 mt-lg-5 mt-md-4 my-sm-0 my-0 order-xl-2 order-lg-2 order-md-2 order-sm-2 order-2">
+              class="col-xl-7 col-lg-7 col-md-7 pt-xl-5 pl-xl-5 pt-lg-5 mt-xl-5 mt-lg-5 mt-md-4 my-sm-0 my-0 order-xl-2 order-lg-2 order-md-2 order-sm-2 order-2" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="200">
             <div class="d-flex">
               <i :class="WatDoetHet.communicatieVerbeteren[1].icon"
                  class="mr-xl-3 ml-xl-0 mr-lg-3 ml-lg-0 mr-md-3 ml-md-0 ml-sm-3 mr-sm-3 mr-0 ml-3"></i>
@@ -61,16 +68,16 @@
           </div>
         </div>
 
-        <div class="row my-0">
+        <div class="row my-0" data-aos="flip-down" data-aos-duration="600" data-aos-offset="200">
           <div
               class="offset-xl-4 offset-lg-4 offset-md-5 offset-sm-4 offset-4 pr-5 col-xl-7 col-lg-7 col-md-7 col-sm-10 col-10 py-lg-0 py-md-0 py-sm-3">
-            <img src="/assets/WatDoetHet/arrow_to_right.png" style="width: 20%;" alt="Arrow right">
+            <img src="/src/assets/WatDoetHet/arrow_to_right.webp" alt="Arrow right" class="arrow_communication">
           </div>
         </div>
 
         <div class="row my-0">
           <div
-              class="col-xl-7 col-lg-7 col-md-7 pt-xl-5 mt-xl-5 pl-xl-4 pl-lg-4 pt-lg-5 mt-lg-5 mt-md-4 pl-md-4 my-sm-0 my-0 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-2">
+              class="col-xl-7 col-lg-7 col-md-7 pt-xl-5 mt-xl-5 pl-xl-4 pl-lg-4 pt-lg-5 mt-lg-5 mt-md-4 pl-md-4 my-sm-0 my-0 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-2" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="200">
             <div class="d-flex">
               <i :class="WatDoetHet.communicatieVerbeteren[2].icon"
                  class="mr-xl-3 ml-xl-0 mr-lg-3 ml-lg-0 mr-md-3 ml-md-0 ml-sm-3 mr-sm-3 mr-0 ml-3"></i>
@@ -80,33 +87,34 @@
               {{ WatDoetHet.communicatieVerbeteren[2].description }}</p>
           </div>
           <div
-              class="col-xl-5 col-lg-5 col-md-5 offset-sm-1 offset-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-5 pl-sm-5 col-sm-10 col-10 py-xl-3 py-lg-3 py-md-3 py-sm-0 py-0 my-sm-4 mt-4 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1">
+              class="col-xl-5 col-lg-5 col-md-5 offset-sm-1 offset-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-5 pl-sm-5 col-sm-10 col-10 py-xl-3 py-lg-3 py-md-3 py-sm-0 py-0 my-sm-4 mt-4 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="450">
             <img :src="imagePath + WatDoetHet.communicatieVerbeteren[2].image"
                  :alt="WatDoetHet.communicatieVerbeteren[2].image" class="info">
-      <!--TABLET-->
-      <!--<a href="https://www.freepik.com/free-psd/woman-using-digital-tablet-car_2566712.htm#query=location&position=11&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik&lt;!&ndash;-->
+            <!--ATTRIBUTES-->
+              <!--TABLET-->
+              <!--<a href="https://www.freepik.com/free-psd/woman-using-digital-tablet-car_2566712.htm#query=location&position=11&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik&lt;!&ndash;-->
 
-      <!--EUROPE-->
-      <!--Image by <a href="https://www.freepik.com/free-vector/map-europe-with-colors-flat-style_2090771.htm#query=belgium&position=4&from_view=search&track=sph">Freepik</a>-->
+              <!--EUROPE-->
+              <!--Image by <a href="https://www.freepik.com/free-vector/map-europe-with-colors-flat-style_2090771.htm#query=belgium&position=4&from_view=search&track=sph">Freepik</a>-->
           </div>
         </div>
 
-        <div class="row my-0">
+        <div class="row my-0" data-aos="flip-down" data-aos-duration="1200" data-aos-offset="600">
           <div
               class="offset-xl-5 offset-lg-5 offset-md-5 offset-sm-6 offset-5 pl-xl-5 pl-lg-5 pl-md-7 col-xl-7 col-lg-7 col-md-7 col-sm-10 col-10 py-lg-0 py-md-0 py-sm-3">
-            <img src="/assets/WatDoetHet/arrow_to_left.png" style="width: 20%;" alt="Arrow left">
+            <img src="/src/assets/WatDoetHet/arrow_to_left.webp" alt="Arrow left" class="arrow_communication">
           </div>
         </div>
 
         <div class="row my-0">
 
           <div
-              class="col-xl-5 col-lg-5 col-md-5 offset-sm-1 offset-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-5 pl-sm-5 col-sm-10 col-10 py-xl-3 py-lg-3 py-md-3 py-sm-0 py-0 my-sm-4 mt-4 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1">
+              class="col-xl-5 col-lg-5 col-md-5 offset-sm-1 offset-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-5 pl-sm-5 col-sm-10 col-10 py-xl-3 py-lg-3 py-md-3 py-sm-0 py-0 my-sm-4 mt-4 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1"  data-aos="fade-right" data-aos-duration="1200" data-aos-offset="600">
             <img :src="imagePath + WatDoetHet.communicatieVerbeteren[3].image"
                  :alt="WatDoetHet.communicatieVerbeteren[3].image" class="info">
           </div>
           <div
-              class="col-xl-7 col-lg-7 col-md-7 pt-xl-5 pl-xl-5 pt-lg-5 mt-xl-5 mt-lg-5 mt-md-5 my-sm-0 my-0 order-xl-2 order-lg-2 order-md-2 order-sm-2 order-2">
+              class="col-xl-7 col-lg-7 col-md-7 pt-xl-5 pl-xl-5 pt-lg-5 mt-xl-5 mt-lg-5 mt-md-5 my-sm-0 my-0 order-xl-2 order-lg-2 order-md-2 order-sm-2 order-2" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="600">
             <div class="d-flex">
               <i :class="WatDoetHet.communicatieVerbeteren[3].icon"
                  class="mr-xl-3 ml-xl-0 mr-lg-3 ml-lg-0 mr-md-3 ml-md-0 ml-sm-3 mr-sm-3 mr-0 ml-3"></i>
@@ -122,7 +130,7 @@
     <!--    VERSTUUR EN ONTVANG CHAT BERICHTEN VAN KLANTEN VIA ONZE SOFTWARE-->
     <div class="container-fluid pb-5" id="software">
       <div class="container-xl">
-        <div class="row">
+        <div class="row" data-aos="fade-up" data-aos-duration="1200" data-aos-ffset="600">
           <div class="offset-xl-2 offset-lg-2 offset-md-1 col-xl-8 col-lg-8 col-md-10 offset-0 col-12">
             <h2 class="text-center mb-xl-4 mb-lg-4 mb-md-0 mb-sm-0 mb-0 py-xl-5 py-lg-5 pt-md-5 pb-md-3 py-sm-3 py-3">
               {{ WatDoetHet.title_software }}</h2>
@@ -130,24 +138,23 @@
         </div>
 
 
-<!--        <div class="container">-->
-          <div class="row mb-5 " v-for="(item,index) in WatDoetHet.software" :key="item.id">
+        <!--        <div class="container">-->
+        <div class="row mb-5 " v-for="(item,index) in WatDoetHet.software" :key="item.id">
 
-            <div
-                class="offset-xl-0 offset-lg-0 offset-md-3 offset-sm-2 offset-1 col-xl-5 col-lg-5 col-md-8 col-sm-7 col-8 py-xl-0 pt-lg-5 pb-lg-0 py-md-5 py-sm-5 py-5"
-                :class="{'left': index % 2 === 1, 'right': index % 2 === 0 }">
-              <img :src="imagePath + item.image" data-aos="fade-up"
-                   data-aos-duration="1200">
-            </div>
-            <div
-                class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-1 offset-1 col-xl-7 col-lg-7 col-md-10 col-sm-10 col-10 image_info_whatsapp"
-                :class="{'right': index % 2 === 1, 'left': index % 2 === 0 }">
-              <i :class="item.icon"></i>
-              <h3 class="mb-3">{{ item.title }}</h3>
-              <p v-html="item.description.replace(/(\n)/g, '<br />')"></p>
+          <div
+              class="offset-xl-0 offset-lg-0 offset-md-3 offset-sm-2 offset-1 col-xl-5 col-lg-5 col-md-8 col-sm-7 col-8 py-xl-0 pt-lg-5 pb-lg-0 py-md-5 py-sm-5 py-5"
+              :class="{'left': index % 2 === 1, 'right': index % 2 === 0 }" :data-aos="item.aosImg" :data-aos-duration="item.duration" data-aos-offset="600">
+            <img :src="imagePath + item.image" :alt="item.image">
+          </div>
+          <div
+              class="offset-xl-0 offset-lg-0 offset-md-1 offset-sm-1 offset-1 col-xl-7 col-lg-7 col-md-10 col-sm-10 col-10 image_info_whatsapp"
+              :class="{'right': index % 2 === 1, 'left': index % 2 === 0 }" :data-aos="item.aosTxt" :data-aos-duration="item.duration" data-aos-offset="600">
+            <i :class="item.icon"></i>
+            <h3 class="mb-3">{{ item.title }}</h3>
+            <p v-html="item.description.replace(/(\n)/g, '<br />')"></p>
 
 
-<!--            </div>-->
+            <!--            </div>-->
           </div>
         </div>
 
@@ -167,14 +174,14 @@ export default {
   data() {
     return {
       WatDoetHet: WatDoetHet,
-      imagePath: "src/assets/WatDoetHet/"
+      imagePath: "/src/assets/WatDoetHet/"
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-@import "src/scss/base";
+@import "/src/scss/base";
 
 .left {
   order: 2;
@@ -185,6 +192,8 @@ export default {
 }
 
 #wat-doet-het {
+  overflow: hidden;
+
   h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -203,7 +212,7 @@ export default {
     transition: $transitionOnHover;
 
     &:hover {
-      transform: translateY(-10px);
+      transform: $effectOnHoverImg;
       box-shadow: $boxShadowHover;
     }
 
@@ -259,8 +268,13 @@ export default {
     border-radius: 350px 350px 0 0;
     //width: 100%;
 
+    .arrow_communication {
+      width: 20%;
+    }
+
     h3 {
-      margin-top: 6%;
+      margin-top: 3%;
+      font-size: $fontSizeH2;
     }
 
     i {
@@ -300,7 +314,7 @@ export default {
     transition: $transitionOnHover;
 
     &:hover {
-      transform: translateY(-10px);
+      transform: $effectOnHoverImg;
       box-shadow: $boxShadowHover;
     }
   }
@@ -310,6 +324,11 @@ export default {
     background: $greyBackground;
     position: relative;
 
+    h3 {
+      font-size: $fontSizeH2;
+      //color: red;
+    }
+
     img {
       border-radius: 315px 315px 1000px 1000px;
       box-shadow: $boxShadow;
@@ -318,8 +337,7 @@ export default {
       margin-left: 10%;
 
       &:hover {
-        transform: translateY(-10px);
-        box-shadow: $boxShadowHover;
+        @extend %effectHoverWithShadow;
       }
     }
 
@@ -352,13 +370,8 @@ export default {
       transition: $transitionOnHover;
 
       &:hover {
-        transform: translateY(-10px);
-        box-shadow: $boxShadowHover;
+        @extend %effectHoverWithShadow;
       }
-    }
-
-    h3 {
-      font-size: $fontSizeH3;
     }
 
     p {
@@ -468,16 +481,8 @@ export default {
     //}
 
     .two_ways_cards {
-      background: $colorTertiary;
       padding: 10% 1.5% 1.5% 1.5%;
       border-radius: 40px;
-      box-shadow: $boxShadow;
-      transition: $transitionOnHover;
-
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: $boxShadowHover;
-      }
 
       h3 {
         font-size: $fontSizeH3;
@@ -495,7 +500,6 @@ export default {
     .number {
       margin: 0 auto;
       position: absolute;
-      transition: $transitionOnHover;
       top: -26%;
       left: 40%;
 
@@ -562,13 +566,6 @@ export default {
       background: $colorTertiary;
       padding: 12% 2.5% 1.5% 2.5%;
       border-radius: 40px;
-      box-shadow: $boxShadow;
-      transition: $transitionOnHover;
-
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: $boxShadowHover;
-      }
 
       h3 {
         font-size: $fontSizeH3;
@@ -586,7 +583,6 @@ export default {
     .number {
       margin: 0 auto;
       position: absolute;
-      transition: $transitionOnHover;
       top: -22%;
       left: 36%;
 
@@ -598,19 +594,6 @@ export default {
         font-size: 24px;
         color: $colorTertiary;
 
-        &:hover {
-          cursor: pointer;
-          background-color: transparent;
-          text-decoration: none;
-        }
-      }
-
-      &:hover {
-        cursor: pointer;
-        background-color: transparent;
-        text-decoration: none;
-
-        transform: scale(1.1);
       }
     }
 
@@ -656,13 +639,6 @@ export default {
         background: $colorTertiary;
         padding: 18% 2.5% 2.5% 2.5%;
         border-radius: 40px;
-        box-shadow: $boxShadow;
-        transition: $transitionOnHover;
-
-        &:hover {
-          transform: translateY(-10px);
-          box-shadow: $boxShadowHover;
-        }
 
         h3 {
           font-size: $fontSizeH3;
@@ -681,7 +657,6 @@ export default {
       .number {
         margin: 0 auto;
         position: absolute;
-        transition: $transitionOnHover;
         top: -15%;
         left: 31%;
       }
