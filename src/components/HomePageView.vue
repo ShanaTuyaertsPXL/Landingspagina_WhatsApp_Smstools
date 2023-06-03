@@ -1,5 +1,4 @@
 <template>
-    <NavbarComponent/>
     <HeaderComponent/>
     <WatIsHet/>
     <WatDoetHet/>
@@ -8,13 +7,10 @@
   <TestHetZelf/>
 <!--    <UseCases />-->
   <contact/>
-<!--    <Example />-->
-    <FooterComponent/>
 
 </template>
 
 <script>
-import NavbarComponent from "./0.header/NavbarComponent.vue";
 import HeaderComponent from "./0.header/HeaderComponent.vue";
 import WatIsHet from "./1.wat_is_het/watishet.vue";
 import WatDoetHet from "./2.wat_doet_het/watdoethet.vue";
@@ -23,13 +19,10 @@ import Voorwaarden from "./4.voorwaarden/voorwaarden.vue";
 import TestHetZelf from "./5.test_het_zelf/TestHetZelf.vue";
 // import UseCases from "./UseCases.vue";
 import Contact from "./contact.vue";
-import FooterComponent from "./7.Footer/FooterComponent.vue";
-// import Example from "./example.vue";
 
 export default {
   name: "HomePageView",
   components: {
-    NavbarComponent,
     HeaderComponent,
     WatIsHet,
     WatDoetHet,
@@ -38,8 +31,6 @@ export default {
     TestHetZelf,
     // UseCases,
     Contact,
-    FooterComponent,
-    // Example,
   },
   created() {
     window.addEventListener('scroll', this.handleScroll);
