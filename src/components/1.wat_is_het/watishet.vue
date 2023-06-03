@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-    
+
     <!--    MOGELIJKHEDEN-->
     <div class="container-xl py-5 mb-4" id="posibilities">
       <div class="row">
