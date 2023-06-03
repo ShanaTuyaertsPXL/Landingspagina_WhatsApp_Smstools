@@ -1,16 +1,19 @@
 <template>
-<!--  <NavbarComponent />-->
+  <Navbar />
     <HomePageView />
+  <Footer/>
 </template>
 
 <script>
-import NavbarComponent from "./components/0.header/NavbarComponent.vue";
+import Navbar from "./components/0.header/NavbarComponent.vue";
 import HomePageView from "./components/HomePageView.vue";
+import Footer from "./components/7.Footer/FooterComponent.vue";
 
 export default {
   components: {
-    NavbarComponent,
-    HomePageView
+    Navbar,
+    HomePageView,
+    Footer
   },
   mounted() {
     AOS.init();
@@ -77,6 +80,9 @@ body {
   position: relative;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
 h1, h2 {
   //color: #494C5A;
   color: $colorTitle;
