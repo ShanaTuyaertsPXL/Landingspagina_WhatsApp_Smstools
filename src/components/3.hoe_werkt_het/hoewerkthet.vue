@@ -3,16 +3,22 @@
   <div id="hoe-werkt-het">
     <div class="container-fluid py-3" id="how-it-works">
       <div class="container-xl">
-        <div class="row">
-          <div class="col-12"><h2 class="mb-5 py-5 text-center">{{ HoeWerktHet.title_combineerWhatsApp }}</h2></div>
+        <div class="row" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="200">
+          <div class="col-12"><h2 class="py-xl-5 py-lg-5 py-md-5 py-sm-5 py-4 text-center">{{ HoeWerktHet.title_combineerWhatsApp }}</h2></div>
         </div>
         <div class="row">
           <div
-              class="offset-xl-0 col-xl-5 offset-lg-0 col-lg-5 offset-md-2 col-md-8 offset-sm-1 col-sm-10 offset-1 col-10">
-            <h1>TEST</h1>
+              class="offset-xl-0 col-xl-5 offset-lg-0 col-lg-5 offset-md-1 col-md-7 offset-sm-1 col-sm-8 offset-1 col-8 mt-xl-5 pl-xl-0 pl-lg-0 pr-xl-5 pr-lg-5 mt-md-0 p-0 pl-md-5" data-aos="fade-right" data-aos-duration="1200" data-aos-ffset="1200">
+            <img :src="imagePath + HoeWerktHet.image" :alt="HoeWerktHet.image">
+            <!--ATTRIBUTE-->
+              <!--MOBILE-->
+              <!--<a href="https://www.freepik.com/free-psd/woman-using-smartphone_2733711.htm#query=phone%20mockup&position=11&from_view=search&track=ais">Image by rawpixel.com</a> on Freepik-->
+
+              <!--WHATSAPP SCREEN-->
+              <!--Image by <a href="https://www.freepik.com/free-vector/whatsapp-screen-template_3049301.htm#query=WhatsApp%20screen&position=0&from_view=search&track=ais">Freepik</a>-->
           </div>
           <div class="col-xl-7 col-lg-7">
-            <div class="row py-5">
+            <div class="row py-5" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="200">
               <div
                   class="offset-xl-0 col-xl-9 offset-lg-2 col-lg-9 offset-md-1 col-md-10 offset-sm-1 col-sm-10 offset-1 col-10 options_software">
                 <div class="svg_check">
@@ -27,7 +33,7 @@
               </div>
             </div>
 
-            <div class="row py-5">
+            <div class="row py-5" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="450">
               <div
                   class="offset-xl-5 col-xl-9 offset-lg-2 col-lg-9 offset-md-1 col-md-10 offset-sm-1 col-sm-10 offset-1 col-10 options_software">
                 <div class="svg_check">
@@ -42,7 +48,7 @@
               </div>
             </div>
 
-            <div class="row py-5">
+            <div class="row py-5" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="600">
               <div
                   class="offset-xl-2 col-xl-9 offset-lg-2 col-lg-9 offset-md-1 col-md-10 offset-sm-1 col-sm-10 offset-1 col-10 options_software">
                 <div class="svg_check">
@@ -70,18 +76,35 @@ export default {
   name: "HoeWerktHet",
   data() {
     return {
-      HoeWerktHet: HoeWerktHet
+      HoeWerktHet: HoeWerktHet,
+      imagePath: "/src/assets/HoeWerktHet/"
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import "src/scss/base";
+@import "/src/scss/base";
 
 #hoe-werkt-het {
+  overflow: hidden;
+
   #how-it-works {
+    overflow: hidden;
     background-color: rgba(220, 53, 69, .16);
+
+    img {
+      border-radius: 1000px;
+      width: 125%;
+      margin-top: 45%;
+      box-shadow: $boxShadow;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: $boxShadowHover;
+      }
+    }
   }
 
   h2 {
@@ -161,11 +184,21 @@ export default {
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
+  #hoe-werkt-het {
+    #how-it-works {
+      img {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 415px) and (max-width: 576px) {
   #hoe-werkt-het {
     #how-it-works {
+      img {
+        margin-top: 0;
+      }
       h3 {
         font-size: $FontSizeH3Mobile;
       }
@@ -180,6 +213,9 @@ export default {
 @media screen and (max-width: 415px) {
   #hoe-werkt-het {
     #how-it-works {
+      img {
+        margin-top: 0;
+      }
       h3 {
         font-size: .9rem;
       }
