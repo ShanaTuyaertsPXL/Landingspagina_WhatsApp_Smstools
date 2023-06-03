@@ -390,8 +390,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "/src/scss/base";
-@import '../../node_modules/flag-icon-css/css/flag-icons.css';
+@import "../../scss/base";
+@import '../../../node_modules/flag-icon-css/css/flag-icons.css';
 
 //#alert {
 //position: absolute;

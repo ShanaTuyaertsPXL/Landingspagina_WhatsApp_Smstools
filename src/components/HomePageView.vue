@@ -18,7 +18,7 @@ import HoeWerktHet from "./3.hoe_werkt_het/hoewerkthet.vue";
 import Voorwaarden from "./4.voorwaarden/voorwaarden.vue";
 import TestHetZelf from "./5.test_het_zelf/TestHetZelf.vue";
 // import UseCases from "./UseCases.vue";
-import Contact from "./contact.vue";
+import Contact from "./7.Contact/contact.vue";
 
 export default {
   name: "HomePageView",

@@ -7,7 +7,7 @@
 <script>
 import Navbar from "./components/0.header/NavbarComponent.vue";
 import HomePageView from "./components/HomePageView.vue";
-import Footer from "./components/7.Footer/FooterComponent.vue";
+import Footer from "./components/8.Footer/FooterComponent.vue";
 
 export default {
   components: {
