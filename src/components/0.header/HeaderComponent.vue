@@ -33,26 +33,9 @@ export default {
     return {
       header: headerInfo,
       // data: [],
-      imagePath: "../src/assets/"
+      imagePath: "/src/assets/"
     }
   },
-  methods: {
-    // async loadData() {
-    //   try {
-    //     const response = await fetch('public/JSON/header.json');
-    //     const jsonData = await response.json();
-    //
-    //     De gegevens toewijzen aan de 'data'-property
-    // this.data = jsonData;
-    // } catch (error) {
-    //   alert('error!!!');
-    //   console.error('Er is een fout opgetreden bij het ophalen van de gegevens:', error);
-    // }
-    // }
-  },
-  mounted() {
-    // this.loadData();
-  }
 }
 </script>
 
@@ -63,7 +46,7 @@ export default {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: url("src/assets/Header/wavy_form.webp") no-repeat bottom;
+  background: url("/src/assets/Header/wavy_form.webp") no-repeat bottom;
   background-size: cover;
 
   h1 {

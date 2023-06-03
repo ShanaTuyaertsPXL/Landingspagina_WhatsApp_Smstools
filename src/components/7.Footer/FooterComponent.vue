@@ -68,7 +68,7 @@ export default {
   data() {
     return {
       footer: footer,
-      imagePath: "src/assets/Footer/",
+      imagePath: "/src/assets/Footer/",
       dropdownOpen: false
     }
   },
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/base";
+@import "/src/scss/base";
 
 #footer {
   background: $footerBackgroundBottom;

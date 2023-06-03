@@ -45,7 +45,7 @@
     <!--      <span class="line line-3"></span>-->
     <!--    </div>-->
     <div class="collapse navbar-collapse w-auto" id="collapsingNavbar" :class="{ 'show': menuCollapsed }">
-      <ul class="navbar-nav w-100 justify-content-center mx-auto">
+      <ul class="navbar-nav w-75 justify-content-center mx-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
@@ -60,16 +60,13 @@
 
 
         <li class="nav-item" v-for="tab in navbar.tabs" :key="tab">
-          <!--          <a class="nav-link" href="#">Voorwaarden <span class="sr-only">(current)</span></a>-->
           <a class="nav-link link" :href="tab.link">{{ tab.tab }}</a>
         </li>
       </ul>
-      <!--      <span class="navbar-text">-->
       <span class="nav-item ml-0 justify-content-end">
         <a :href="navbar.register.link" target="_blank">
           <button class="btn-register">{{ navbar.register.text }}</button>
         </a>
-        <!--      Navbar text with an inline element-->
     </span>
     </div>
     <div class="progress-container">
@@ -424,9 +421,15 @@ export default {
   #navbar_styling {
     overflow: hidden;
   }
+  .navbar-nav {
+    width: 75%!important;
+  }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
+  .navbar-nav {
+    width: 75%!important;
+  }
 
 }
 
@@ -435,12 +438,18 @@ export default {
     .navbar-nav .nav-link {
       font-size: .92rem;
     }
+    .navbar-nav {
+      width: 100%!important;
+    }
   }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
 
   #navbar_styling {
+    .navbar-nav {
+      width: 100%!important;
+    }
 
     .navbar-brand {
       width: 25%;
@@ -469,6 +478,10 @@ export default {
 @media screen and (min-width: 415px) and (max-width: 576px) {
   .navbar {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+
+    .navbar-nav {
+      width: 100%!important;
+    }
 
     .navbar-brand {
       width: 25%;
@@ -503,6 +516,10 @@ export default {
 
 @media screen and (max-width: 415px) {
   .navbar {
+    .navbar-nav {
+      width: 100%!important;
+    }
+
     background-color: $colorTertiary;
     #collapsingNavbar {
       padding-bottom: 3%;
@@ -516,6 +533,10 @@ export default {
 
 @media screen and (max-width: 320px) {
   .navbar {
+    .navbar-nav {
+      width: 100%!important;
+    }
+
     #collapsingNavbar {
       padding-bottom: 4%;
     }
