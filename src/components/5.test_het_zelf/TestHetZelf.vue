@@ -121,30 +121,30 @@ export default {
 </script>
 
 <style lang="scss">
-//@import "/src/scss/base";
+@import "/src/scss/base";
 
 //Variabelen
 //----------
 //BACKGROUND
-$greyBackground: #F3F6FA;
+//$greyBackground: #F3F6FA;
 
 //USED COLORS
-$colorPrimary: #52555a;
-$colorSecondary: #dc3545;
-$colorTertiary: #ffffff;
-$colorInactive: #CCCCCC;
+//$colorPrimary: #52555a;
+//$colorSecondary: #dc3545;
+//$colorTertiary: #ffffff;
+//$colorInactive: #CCCCCC;
 
 //BOX-SHADOW
-$boxShadow: 0 0 20px rgba(0, 0, 0, .16);
+//$boxShadow: 0 0 20px rgba(0, 0, 0, .16);
 
-$transitionOnHover: all .2s ease-in-out;
+//$transitionOnHover: all .2s ease-in-out;
 
 //-----------------------------------------------
 //RESPONSIVE
 
 //FONT-SIZE
-$FontSizeH2_BreakMobile: 1.5rem;
-$FontSizeParagraphMobile: 1rem;
+//$FontSizeH2_BreakMobile: 1.5rem;
+//$FontSizeParagraphMobile: 1rem;
 
 //----------------------------------------------------------------------------------------------------------------------
 

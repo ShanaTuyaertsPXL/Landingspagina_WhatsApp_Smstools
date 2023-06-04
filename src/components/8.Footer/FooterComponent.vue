@@ -81,21 +81,21 @@ export default {
 </script>
 
 <style lang="scss">
-//@import "/src/scss/base";
+@import "/src/scss/base";
 
 //Variabelen
 //----------
 //USED COLORS
-$colorTertiary: #ffffff;
+//$colorTertiary: #ffffff;
 
 //FONT-SIZE
-$fontSizeParagraph: 1rem;
-$fontSizeH3: 1.25rem;
+//$fontSizeParagraph: 1rem;
+//$fontSizeH3: 1.25rem;
 
 //FOOTER
-$footerBackground: #282F3A;
-$footerBackgroundBottom: #252B36;
-$colorLinksFooter: #a0a8b5;
+//$footerBackground: #282F3A;
+//$footerBackgroundBottom: #252B36;
+//$colorLinksFooter: #a0a8b5;
 
 //----------------------------------------------------------------------------------------------------------------------
 

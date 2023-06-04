@@ -158,33 +158,33 @@ export default {
 </script>
 
 <style scoped lang="scss">
-//@import "/src/scss/base";
+@import "/src/scss/base";
 
 //Variabelen
 //----------
 
 //BACKGROUND
-$greyBackground: #F3F6FA;
-$gradientLightRed: #F66767;
+//$greyBackground: #F3F6FA;
+//$gradientLightRed: #F66767;
 
 //USED COLORS
-$colorSecondary: #dc3545;
-$colorTertiary: #ffffff;
+//$colorSecondary: #dc3545;
+//$colorTertiary: #ffffff;
 
 //FONT-SIZE
-$fontSizeParagraph: 1rem;
-$fontSizeBreak: 2.18rem;
+//$fontSizeParagraph: 1rem;
+//$fontSizeBreak: 2.18rem;
 
-$transitionOnHover: all .2s ease-in-out;
-$effectOnHoverImg: translateY(-10px);
+//$transitionOnHover: all .2s ease-in-out;
+//$effectOnHoverImg: translateY(-10px);
 
 //-----------------------------------------------
 //RESPONSIVE
 
 //FONT-SIZE
-$FontSizeBreakTablet: 1.8rem;
-$FontSizeH2_BreakMobile: 1.5rem;
-$FontSizeParagraphMobile: 1rem;
+//$FontSizeBreakTablet: 1.8rem;
+//$FontSizeH2_BreakMobile: 1.5rem;
+//$FontSizeParagraphMobile: 1rem;
 
 //----------------------------------------------------------------------------------------------------------------------
 
