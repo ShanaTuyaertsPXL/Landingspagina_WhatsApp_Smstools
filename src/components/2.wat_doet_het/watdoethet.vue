@@ -181,7 +181,45 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "/src/scss/base";
+//@import "/src/scss/base";
+//Variabelen
+//----------
+//BACKGROUND
+$greyBackground: #F3F6FA;
+
+//USED COLORS
+$colorPrimary: #52555a;
+$colorSecondary: #dc3545;
+$colorTertiary: #ffffff;
+
+//FONT-SIZE
+$fontSizeParagraph: 1rem;
+$fontSizeH2: 1.75rem;
+$fontSizeH3: 1.25rem;
+
+//BOX-SHADOW
+$boxShadow: 0 0 20px rgba(0, 0, 0, .16);
+$boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+
+$transitionOnHover: all .2s ease-in-out;
+$effectOnHoverImg: translateY(-10px);
+
+//-----------------------------------------------
+//RESPONSIVE
+
+//FONT-SIZE
+$FontSizeH2_BreakMobile: 1.5rem;
+$FontSizeH3Mobile: 1rem;
+$FontSizeParagraphMobile: 1rem;
+
+//----------------------------------------------------------------------------------------------------------------------
+//EXTENDS
+%effectHoverWithShadow {
+  transform: translateY(-10px);
+  $boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+}
+
+//----------------------------------------------------------------------------------------------------------------------
 
 .left {
   order: 2;

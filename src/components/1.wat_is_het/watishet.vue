@@ -158,8 +158,35 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "/src/scss/base";
+//@import "/src/scss/base";
 
+//Variabelen
+//----------
+
+//BACKGROUND
+$greyBackground: #F3F6FA;
+$gradientLightRed: #F66767;
+
+//USED COLORS
+$colorSecondary: #dc3545;
+$colorTertiary: #ffffff;
+
+//FONT-SIZE
+$fontSizeParagraph: 1rem;
+$fontSizeBreak: 2.18rem;
+
+$transitionOnHover: all .2s ease-in-out;
+$effectOnHoverImg: translateY(-10px);
+
+//-----------------------------------------------
+//RESPONSIVE
+
+//FONT-SIZE
+$FontSizeBreakTablet: 1.8rem;
+$FontSizeH2_BreakMobile: 1.5rem;
+$FontSizeParagraphMobile: 1rem;
+
+//----------------------------------------------------------------------------------------------------------------------
 
 #wat-is-het {
   overflow: hidden;
@@ -170,7 +197,7 @@ export default {
 
     #verbind {
       img {
-        transition: all .2s ease-in-out;
+        transition: $transitionOnHover;
 
         &:hover {
           transform: $effectOnHoverImg;
@@ -342,45 +369,6 @@ export default {
 
     }
   }
-
-
-  //.social_icon {
-  //  //margin: 0 auto;
-  //  //position: absolute;
-  //
-  //  //transition: $transitionOnHover;
-  //
-  //  //top: -20%;
-  //  //left: 40%;
-  //
-  //  .social_icon_svg {
-  //    position: relative;
-  //  }
-  //
-  //  .bi {
-  //    position: absolute;
-  //    top: 3%;
-  //    left: 33%;
-  //    //z-index: 98;
-  //    //font-size: 24px;
-  //    color: $colorTertiary;
-  //    transition: $transitionOnHover;
-  //
-  //    &:hover {
-  //      cursor: pointer;
-  //      background-color: transparent;
-  //      text-decoration: none;
-  //    }
-  //  }
-  //
-  //  &:hover {
-  //    cursor: pointer;
-  //    background-color: transparent;
-  //    text-decoration: none;
-  //
-  //    transform: scale(1.1);
-  //  }
-  //}
 }
 
 //----------------------------------------------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 <template>
-  <Navbar />
-    <HomePageView />
+  <Navbar/>
+  <HomePageView/>
   <Footer/>
 </template>
 
@@ -10,6 +10,11 @@ import HomePageView from "./components/HomePageView.vue";
 import Footer from "./components/8.Footer/FooterComponent.vue";
 
 export default {
+  // provide() {
+  //   return {
+  //     style: "src/scss/base";
+  //   }
+  // },
   components: {
     Navbar,
     HomePageView,
@@ -24,6 +29,7 @@ export default {
 <style lang="scss">
 //Variabelen
 //----------
+
 //BACKGROUND
 $greyBackground: #F3F6FA;
 $gradientLightRed: #F66767;
@@ -51,13 +57,14 @@ $boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
 $boxShadowTerms: 0 0 10px rgba(0, 0, 0, 0.16);
 
 $transitionOnHover: all .2s ease-in-out;
+$effectOnHoverImg: translateY(-10px);
 
 //FOOTER
 $footerBackground: #282F3A;
 $footerBackgroundBottom: #252B36;
 $colorLinksFooter: #a0a8b5;
 
-//----------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------
 //RESPONSIVE
 
 //FONT-SIZE
@@ -65,6 +72,15 @@ $FontSizeBreakTablet: 1.8rem;
 $FontSizeH2_BreakMobile: 1.5rem;
 $FontSizeH3Mobile: 1rem;
 $FontSizeParagraphMobile: 1rem;
+
+//-----------------------------------------------
+//EXTENDS
+%effectHoverWithShadow {
+  transform: translateY(-10px);
+  $boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+}
+
+//----------------------------------------------------------------------------------------------------------------------
 
 //@import "src/scss/base";
 
@@ -83,6 +99,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
+
 h1, h2 {
   //color: #494C5A;
   color: $colorTitle;
@@ -99,7 +116,6 @@ p {
   font-size: $fontSizeParagraph;
   color: $colorParagraph;
 }
-
 
 
 //SCROLL INDICATOR
@@ -144,7 +160,6 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: $colorSecondary;
 }
-
 
 
 //-----------------------------------

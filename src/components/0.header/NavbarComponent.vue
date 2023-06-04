@@ -1,40 +1,13 @@
 <template>
-<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--    <div class="container-fluid">-->
-<!--      <a class="navbar-brand" href="#">Navbar</a>-->
-<!--      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--      </button>-->
-<!--      <div class="collapse navbar-collapse" id="navbarNav">-->
-<!--        <ul class="navbar-nav">-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="#">Features</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="#">Pricing</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </nav>-->
-
-
-
   <nav class="navbar navbar-expand-lg justify-content-center" id="navbar_styling">
     <a class="navbar-brand mr-auto" :href="navbar.linkBrand"><img :src="imagePath + navbar.brand" :alt="navbar.alt"></a>
     <button class="navbar-toggler" @click="toggleMenu" :class="{ 'collapsed': menuCollapsed }" type="button"
             data-toggle="collapse" data-target="#navbarText" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
       <i class="fa-solid fa-bars hamburgermenu"></i>
-<!--      <span class="navbar-toggler-icon"></span>-->
     </button>
 
+    <!--POGING TOT CUSTOM MENU-->
     <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar"-->
     <!--                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">-->
     <!--          <span class="navbar-toggler-icon"></span>-->
@@ -73,97 +46,6 @@
       <div class="progress-bar" id="indicatorBar"></div>
     </div>
   </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!--        <nav class="navbar navbar-expand-lg bg-faded justify-content-center">-->
-  <!--          <a href="#" class="navbar-brand d-flex w-15 mr-auto"><img src="../../assets/Smstools-Dark.png"-->
-  <!--                                                                    alt="Smstools logo"></a>-->
-  <!--          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">-->
-  <!--            <span class="navbar-toggler-icon"></span>-->
-  <!--          </button>-->
-  <!--          <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">-->
-  <!--            <ul class="navbar-nav w-100 justify-content-center">-->
-
-  <!--              <li class="nav-item dropdown">-->
-  <!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-  <!--                  Over WhatsApp-->
-  <!--                </a>-->
-  <!--                <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-  <!--                  <a class="dropdown-item link" href="#wat-is-het">Wat is WhatsApp?</a>-->
-  <!--                  <a class="dropdown-item link" href="#wat-doet-het">Wat doet WhatsApp?</a>-->
-  <!--    &lt;!&ndash;              <div class="dropdown-divider"></div>&ndash;&gt;-->
-  <!--                  <a class="dropdown-item link" href="#hoe-werkt-het">Hoe werkt WhatsApp?</a>-->
-  <!--                </div>-->
-  <!--              </li>-->
-
-
-  <!--              <li class="nav-item">-->
-  <!--                <a class="nav-link link" href="#voorwaarden">Voorwaarden</a>-->
-  <!--                &lt;!&ndash;          <a class="nav-link" @click="scrollToAnchorPoint('voorwaarden')">Voorwaarden</a>&ndash;&gt;-->
-  <!--              </li>-->
-  <!--              <li class="nav-item">-->
-  <!--                <a class="nav-link link" href="#test-het-zelf">Test het zelf</a>-->
-  <!--              </li>-->
-  <!--              <li class="nav-item">-->
-  <!--                <a class="nav-link link" href="#use-cases">Use Cases</a>-->
-  <!--              </li>-->
-  <!--              <li class="nav-item">-->
-  <!--                <a class="nav-link link" href="#contact">Contact</a>-->
-  <!--              </li>-->
-  <!--            </ul>-->
-  <!--            <ul class="nav navbar-nav ml-auto w-25 justify-content-end">-->
-  <!--              <li class="nav-item">-->
-  <!--                <a href="https://www.smstools.be/nl/register" target="_blank">-->
-  <!--                  <button class="btn-register">Register</button>-->
-  <!--                </a></li>-->
-  <!--            </ul>-->
-  <!--          </div>-->
-  <!--          <div class="progress-container">-->
-  <!--            <div class="progress-bar" id="indicatorBar"></div>-->
-  <!--          </div>-->
-  <!--        </nav>-->
-
-
-  <!--  <nav class="navbar navbar-expand-lg fixed-top bg-white" :class="{ 'navbar-scrolled': isScrolled }">-->
-  <!--    <a class="navbar-brand" href="#"><img src="../bootstrap/assets/homepagina/originele_logo_xis.webp" alt="foto_logo" width="225px"></a>-->
-  <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
-  <!--      <span class="navbar-toggler-icon"></span>-->
-  <!--    </button>-->
-  <!--    <div class="collapse navbar-collapse" id="navbarNavDropdown">-->
-  <!--      <ul class="navbar-nav ml-auto">-->
-  <!--        <li class="nav-item">-->
-  <!--          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
-  <!--        </li>-->
-  <!--        <li class="nav-item">-->
-  <!--          <a class="nav-link" href="#">Features</a>-->
-  <!--        </li>-->
-  <!--        <li class="nav-item">-->
-  <!--          <a class="nav-link" href="#">Pricing</a>-->
-  <!--        </li>-->
-  <!--        <li class="nav-item dropdown">-->
-  <!--          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">-->
-  <!--            Dropdown link-->
-  <!--          </a>-->
-  <!--          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
-  <!--            <a class="dropdown-item" href="#">Action</a>-->
-  <!--            <a class="dropdown-item" href="#">Another action</a>-->
-  <!--            <a class="dropdown-item" href="#">Something else here</a>-->
-  <!--          </div>-->
-  <!--        </li>-->
-  <!--      </ul>-->
-  <!--    </div>-->
-  <!--  </nav>-->
 </template>
 
 <script>
@@ -196,8 +78,61 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/base";
+//@import "src/scss/base";
+//Variabelen
+//----------
 
+//BACKGROUND
+$greyBackground: #F3F6FA;
+$gradientLightRed: #F66767;
+
+//USED COLORS
+$colorPrimary: #52555a;
+$colorSecondary: #dc3545;
+$colorPrimary-hover: #f62626;
+$colorTertiary: #ffffff;
+$colorInactive: #CCCCCC;
+
+//COLOR TEXT
+$colorTitle: #393e46;
+$colorParagraph: #6a727f;
+
+//FONT-SIZE
+$fontSizeParagraph: 1rem;
+$fontSizeH2: 1.75rem;
+$fontSizeH3: 1.25rem;
+$fontSizeBreak: 2.18rem;
+
+//BOX-SHADOW
+$boxShadow: 0 0 20px rgba(0, 0, 0, .16);
+$boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+$boxShadowTerms: 0 0 10px rgba(0, 0, 0, 0.16);
+
+$transitionOnHover: all .2s ease-in-out;
+$effectOnHoverImg: translateY(-10px);
+
+//FOOTER
+$footerBackground: #282F3A;
+$footerBackgroundBottom: #252B36;
+$colorLinksFooter: #a0a8b5;
+
+//-----------------------------------------------
+//RESPONSIVE
+
+//FONT-SIZE
+$FontSizeBreakTablet: 1.8rem;
+$FontSizeH2_BreakMobile: 1.5rem;
+$FontSizeH3Mobile: 1rem;
+$FontSizeParagraphMobile: 1rem;
+
+//-----------------------------------------------
+//EXTENDS
+%effectHoverWithShadow {
+  transform: translateY(-10px);
+  $boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+}
+
+//----------------------------------------------------------------------------------------------------------------------
 
 .navbar, #collapsingNavbar, .navbar-nav, .nav-link.active {
   color: $colorSecondary;

@@ -84,7 +84,26 @@ export default {
 </script>
 
 <style lang="scss">
-@import "/src/scss/base";
+//@import "/src/scss/base";
+//Variabelen
+//----------
+//USED COLORS
+$colorSecondary: #dc3545;
+$colorTertiary: #ffffff;
+
+//BOX-SHADOW
+$boxShadow: 0 0 20px rgba(0, 0, 0, .16);
+$boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+
+$transitionOnHover: all .2s ease-in-out;
+
+//-----------------------------------------------
+//RESPONSIVE
+
+//FONT-SIZE
+$FontSizeH3Mobile: 1rem;
+
+//----------------------------------------------------------------------------------------------------------------------
 
 #hoe-werkt-het {
   overflow: hidden;

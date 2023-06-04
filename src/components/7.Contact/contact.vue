@@ -390,8 +390,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../scss/base";
-@import '../../../node_modules/flag-icon-css/css/flag-icons.css';
+//Variabelen
+//----------
+//BACKGROUND
+$greyBackground: #F3F6FA;
+
+//USED COLORS
+$colorPrimary: #52555a;
+$colorSecondary: #dc3545;
+$colorTertiary: #ffffff;
+
+//BOX-SHADOW
+$boxShadow: 0 0 20px rgba(0, 0, 0, .16);
+$boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+
+$transitionOnHover: all .2s ease-in-out;
+
+//-----------------------------------------------
+//RESPONSIVE
+
+//FONT-SIZE
+$FontSizeBreakTablet: 1.8rem;
+$FontSizeH2_BreakMobile: 1.5rem;
+$FontSizeH3Mobile: 1rem;
+$FontSizeParagraphMobile: 1rem;
+
+//----------------------------------------------------------------------------------------------------------------------
+
+//@import "../../scss/base";
+//@import '../../../node_modules/flag-icon-css/css/flag-icons.css';
 
 //#alert {
 //position: absolute;

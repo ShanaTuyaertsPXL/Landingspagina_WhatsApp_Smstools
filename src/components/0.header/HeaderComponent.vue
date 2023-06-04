@@ -1,5 +1,4 @@
 <template>
-
   <!--  <div class="container-fluid" id="header" v-for="item in header" :key="header">-->
   <div class="container-fluid" id="header">
     <div class="row">
@@ -29,6 +28,8 @@ import headerInfo from "../../assets/JSON/header.json"
 
 export default {
   name: "HeaderComponent.vue",
+  // inject:
+  //     ['style'],
   data() {
     return {
       header: headerInfo,
@@ -40,7 +41,61 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/base";
+//@import "src/scss/base";
+//Variabelen
+//----------
+
+//BACKGROUND
+$greyBackground: #F3F6FA;
+$gradientLightRed: #F66767;
+
+//USED COLORS
+$colorPrimary: #52555a;
+$colorSecondary: #dc3545;
+$colorPrimary-hover: #f62626;
+$colorTertiary: #ffffff;
+$colorInactive: #CCCCCC;
+
+//COLOR TEXT
+$colorTitle: #393e46;
+$colorParagraph: #6a727f;
+
+//FONT-SIZE
+$fontSizeParagraph: 1rem;
+$fontSizeH2: 1.75rem;
+$fontSizeH3: 1.25rem;
+$fontSizeBreak: 2.18rem;
+
+//BOX-SHADOW
+$boxShadow: 0 0 20px rgba(0, 0, 0, .16);
+$boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+$boxShadowTerms: 0 0 10px rgba(0, 0, 0, 0.16);
+
+$transitionOnHover: all .2s ease-in-out;
+$effectOnHoverImg: translateY(-10px);
+
+//FOOTER
+$footerBackground: #282F3A;
+$footerBackgroundBottom: #252B36;
+$colorLinksFooter: #a0a8b5;
+
+//-----------------------------------------------
+//RESPONSIVE
+
+//FONT-SIZE
+$FontSizeBreakTablet: 1.8rem;
+$FontSizeH2_BreakMobile: 1.5rem;
+$FontSizeH3Mobile: 1rem;
+$FontSizeParagraphMobile: 1rem;
+
+//-----------------------------------------------
+//EXTENDS
+%effectHoverWithShadow {
+  transform: translateY(-10px);
+  $boxShadowHover: 0 10px 20px rgba(0, 0, 0, .16);
+}
+
+//----------------------------------------------------------------------------------------------------------------------
 
 #header {
   height: 100vh;
@@ -273,12 +328,15 @@ export default {
     h1 {
       font-size: 3rem;
     }
+
     p {
       font-size: 1rem;
     }
+
     button {
       font-size: 1.5rem;
     }
+
     #whatsapp-logo {
 
       position: absolute;
@@ -330,6 +388,7 @@ export default {
     p {
       font-size: 1rem;
     }
+
     button {
       font-size: 1.25rem;
     }
