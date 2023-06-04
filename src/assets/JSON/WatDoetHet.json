@@ -10,19 +10,19 @@
     {
       "number": 2,
       "title": "Automatiseer klantencommunicatie",
-      "description": "Bespaar tijd en verhoog de klanttevredenheid met onze handige interface, waarmee u berichten kunt automatiseren, gepersonaliseerde meldingen kunt verzenden en snelle klantenservice kunt bieden. \n Profiteer van de krachtige mogelijkheden van Whatsapp bij Smstools.",
+      "description": "Bespaar tijd en verhoog de klanttevredenheid met onze handige interface, waarmee u berichten kunt automatiseren, gepersonaliseerde meldingen kunt verzenden en snelle klantenservice kunt bieden. \n Profiteer van de krachtige mogelijkheden van WhatsApp bij Smstools.",
       "class": "mr-xl-0 ml-xl-4 mr-lg-0 ml-lg-4"
     },
     {
       "number": 3,
       "title": "Ontvang feedback van klanten",
-      "description": "Haal waardevolle feedback van uw klanten binnen met behulp van Whatsapp bij Smstools. Dankzij de eenvoudige integratie van Whatsapp en Smstools kunt u een efficiënt feedbackproces opzetten en uw klantgerichtheid naar een hoger niveau tillen. Luister naar de stem van uw klanten, verbeter uw bedrijf voortdurend en bouw aan een sterke klantrelatie.",
+      "description": "Haal waardevolle feedback van uw klanten binnen met behulp van WhatsApp bij Smstools. Dankzij de eenvoudige integratie van WhatsApp en Smstools kunt u een efficiënt feedbackproces opzetten en uw klantgerichtheid naar een hoger niveau tillen. Luister naar de stem van uw klanten, verbeter uw bedrijf voortdurend en bouw aan een sterke klantrelatie.",
       "class": "mr-xl-4 ml-xl-0 mr-lg-4 ml-lg-0"
     },
     {
       "number": 4,
       "title": "Verstuur berichten via het Smstools-paneel",
-      "description": "Ontdek de eenvoudige integratie van Whatsapp in Smstools en stuur berichten via Whatsapp vanuit het Smstools-paneel. Ervaar het gemak en de efficiëntie van een geoptimaliseerde communicatie met uw klanten, met de voordelen van Whatsapp voor snelle en effectieve berichtenuitwisseling.",
+      "description": "Ontdek de eenvoudige integratie van WhatsApp in Smstools en stuur berichten via WhatsApp vanuit het Smstools-paneel. Ervaar het gemak en de efficiëntie van een geoptimaliseerde communicatie met uw klanten, met de voordelen van WhatsApp voor snelle en effectieve berichtenuitwisseling.",
       "class": "mr-xl-0 ml-xl-4 mr-lg-0 ml-lg-4"
     }
   ],
@@ -38,7 +38,7 @@
     "2": {
       "icon": "bi bi-graph-up-arrow mr-3",
       "communicatieManier": "Versterk samenwerking en teamwork voor verbeterde prestaties",
-      "description": "Met Whatsapp kunnen teams makkelijk samenwerken en hun werk efficiënt organiseren. Dankzij real-time communicatie kunnen teamleden snel reageren op vragen, ideeën uitwisselen en beslissingen nemen. Dit resulteert in een gevoel van samenwerking en verhoogde productiviteit voor het hele team.",
+      "description": "Met WhatsApp kunnen teams makkelijk samenwerken en hun werk efficiënt organiseren. Dankzij real-time communicatie kunnen teamleden snel reageren op vragen, ideeën uitwisselen en beslissingen nemen. Dit resulteert in een gevoel van samenwerking en verhoogde productiviteit voor het hele team.",
       "image": "verbeterde-samenwerking__teamwork.webp"
     },
     "3": {
@@ -62,9 +62,9 @@
     },
     {
       "id": 2,
-      "title": "Stimuleer uw verkoop dankzij Whatsapp Conversies",
+      "title": "Stimuleer uw verkoop dankzij WhatsApp Conversies",
       "icon": "bi bi-rocket-takeoff",
-      "description": "Met onze geavanceerde software kunt u direct contact leggen met uw klanten via Whatsapp, waardoor u gepersonaliseerde communicatie kunt bieden die de verkoop bevordert. Profiteer van functies zoals het versturen van afbeeldingen, video's en documenten om uw producten visueel aantrekkelijk te presenteren. Geautomatiseerde berichten en autoresponders zorgen voor snelle respons en een optimale klantenservice-ervaring. Met Whatsapp Conversies kunt u de effectiviteit van uw marketing meten en optimaliseren. Bereik uw klanten op een directe en persoonlijke manier, en creëer een positieve koopervaring die leidt tot groei en succes voor uw bedrijf.",
+      "description": "Met onze geavanceerde software kunt u direct contact leggen met uw klanten via WhatsApp, waardoor u gepersonaliseerde communicatie kunt bieden die de verkoop bevordert.\n\nProfiteer van functies zoals het versturen van afbeeldingen, video's en documenten om uw producten visueel aantrekkelijk te presenteren. Geautomatiseerde berichten en autoresponders zorgen voor snelle respons en een optimale klantenservice-ervaring. Met WhatsApp Conversies kunt u de effectiviteit van uw marketing meten en optimaliseren. Bereik uw klanten op een directe en persoonlijke manier, en creëer een positieve koopervaring die leidt tot groei en succes voor uw bedrijf.",
       "image": "img-stimuleer_verkoop.webp",
       "aosImg": "fade-up",
       "aosTxt": "fade-right",

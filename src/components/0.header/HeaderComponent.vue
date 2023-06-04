@@ -108,6 +108,10 @@ $FontSizeParagraphMobile: 1rem;
     font-size: 60px;
     //transform: translateY(100%);
     margin: 25% 0 0 10%;
+
+    span a {
+      font-family: "Raleway", sans-serif;
+    }
   }
 
   p {

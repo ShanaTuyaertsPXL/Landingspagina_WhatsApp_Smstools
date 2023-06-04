@@ -19,6 +19,18 @@ Tot slot kan de eindgebruiker met vragen terecht bij het bedrijf via een contact
 <i>Het doel van deze graduaatsproef is het bouwen van een landingspagina ter ondersteuning van de huidige Smstools website. Deze informatie zal beter begrijpelijk zijn voor de bezoekers van deze pagina. Naast het Informatieve aspect van deze pagina zal men interactie kunnen met de landingspagina en de gewenste respons verkrijgen.</i>
 <hr>
 
+### In onderstaande URL zitten volgende bestanden:
+https://drive.google.com/drive/folders/1RDzoBhJnoSfTFMrP8bi949-wBBBPCDWO?usp=sharing
+- Visueel design landingspagina (ontwerpen) - Adobe XD en print screens landingspagina
+- Bronnen (en bekeken bronnen)
+- Aanbevelingen
+- Scenario's test-sms
+- Overige Photoshop en Illustrator bestanden voor de foto's
+- Social media
+- Logboek
+
+<hr>
+
 #### This template should help get you started developing with Vue 3 in Vite.
 ### Aanbevolen IDE-configuratie
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
