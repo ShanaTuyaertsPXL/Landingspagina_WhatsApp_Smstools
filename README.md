@@ -31,6 +31,8 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 <hr>
 
+### <u>Indien de styling van de import van _base.scss niet doorkomt, in elk component zet je dan de import in commentaar en de variabelen uit commentaar. Dan komt de styling door.</u>
+
 ## Opstart van het project
 <u>Om het project te kunnen starten/uit te voeren, moet je Node.js geïnstalleerd hebben op je desktop.</u>
 
